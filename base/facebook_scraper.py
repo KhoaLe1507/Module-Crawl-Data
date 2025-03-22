@@ -23,11 +23,15 @@ from web_scraper import WebScraper, Config
 @dataclass
 class FacebookConfig(Config):
     site_url = "https://www.facebook.com"
-    username = "dusqdn.eml@gmail.com"
-    password = "DS536686facebook"
+    username = "..."
+    password = "..."
+
+    # is_scraping_general_info: bool = True
+    # is_scraping_about_tab: bool = True
+    # is_scraping_posts: bool = False
 
     is_scraping_general_info: bool = True
-    is_scraping_about_tab: bool = True
+    is_scraping_about_tab: bool = False
     is_scraping_posts: bool = False
 
     login_form_path = '//form[@class="_9vtf"]'
@@ -78,20 +82,20 @@ class FacebookScraper(WebScraper):
             for i, url in enumerate(urls):
                 executor.submit(self.__scrape_url, url, i)
 
-        # if self.config.is_scraping_about_tab or self.config.is_scraping_posts:
-        #     for _ in range(self.config.n_workers):
-        #         driver = self.driver_queue.get()
-        #         driver.get(driver.current_url)
-        #         try:
-        #             self.__handle_login_from_redirecting(driver, driver.current_url)
-        #         except NoSuchElementException:
-        #             self.__handle_login_from_kol_page(driver)
-        #
-        #         self.driver_queue.put(driver)
-        #
-        # if self.config.is_scraping_about_tab:
-        #     for i, url in enumerate(urls):
-        #         executor.submit(self.__scrape_about_tab, url, i)
+        if self.config.is_scraping_about_tab:
+            for i, url in enumerate(urls):
+                executor.submit(self.__scrape_about_tab, url, i)
+
+        if self.config.is_scraping_about_tab or self.config.is_scraping_posts:
+            for _ in range(self.config.n_workers):
+                driver = self.driver_queue.get()
+                driver.get(driver.current_url)
+                try:
+                    self.__handle_login_from_redirecting(driver, driver.current_url)
+                except NoSuchElementException:
+                    self.__handle_login_from_kol_page(driver)
+
+                self.driver_queue.put(driver)
 
     def __scrape_general_url(self, driver: webdriver.Chrome, kol: FacebookKOL) -> None:
         try:
