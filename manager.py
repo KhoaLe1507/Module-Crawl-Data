@@ -29,8 +29,8 @@ class ScrapingManager(object):
     '''
 
     FACEBOOK_URL = "https://www.facebook.com"
-    USERNAME = '0987655384'
-    PASSWORD = 'vonuhuyentran1202'
+    USERNAME = '...'
+    PASSWORD = '...'
 
     xpaths = {
         'login_form_path': '//form[@class="_9vtf"]',
