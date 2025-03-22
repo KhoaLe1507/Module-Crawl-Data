@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, override
 import requests
 import urllib.parse
 import regex
@@ -137,6 +137,7 @@ class YoutubeScraper(WebScraper):
         logging.info("Đã thử hết API Keys nhưng vẫn lỗi.Đợi lúc 14h để được reset")
         return None
 
+    @override
     def run(self, urls: list[str]) -> None:
         for url in urls:
             logging.info(f"Đang xử lý: {url}")
