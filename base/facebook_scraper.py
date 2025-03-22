@@ -22,10 +22,9 @@ from web_scraper import WebScraper, Config
 
 @dataclass
 class FacebookConfig(Config):
+    username: str = ""
+    password: str = ""
     site_url = "https://www.facebook.com"
-    username = "..."
-    password = "..."
-
     # is_scraping_general_info: bool = True
     # is_scraping_about_tab: bool = True
     # is_scraping_posts: bool = False
