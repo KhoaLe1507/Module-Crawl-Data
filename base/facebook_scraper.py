@@ -1,7 +1,11 @@
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass
 from typing import List, override
 from tqdm import tqdm
+import threading
+import queue
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 import datetime
 import regex
@@ -23,29 +27,47 @@ from bs4 import BeautifulSoup, Tag
 from web_scraper import WebScraper, Config, ScrapeResult
 
 
-@dataclass
+def conv_chrome_options(
+    chrome_options: List[str], experimental_options: List[tuple]
+) -> webdriver.ChromeOptions:
+    result = webdriver.ChromeOptions()
+    for option in chrome_options:
+        result.add_argument(option)
+    for option in experimental_options:
+        result.add_experimental_option(*option)
+    return result
+
+
 class FacebookConfig(Config):
-    username: str = ""
-    password: str = ""
-    site_url = "https://www.facebook.com"
+    def __init__(self) -> None:
+        super().__init__()
+        self.chrome_options = ["start-maximized"]
+        self.experimental_options = [
+            ("prefs", {"profile.default_content_setting_values.notifications": 2})
+        ]
+        self.n_workers: int = 1
+        self.n_exceptional_workers: int = 1
+        self.username: str = ""
+        self.password: str = ""
+        self.site_url = "https://www.facebook.com"
 
-    is_scraping_general_info: bool = True
-    is_scraping_about_tab: bool = True
-    is_scraping_posts: bool = False
+        self.is_scraping_general_info: bool = True
+        self.is_scraping_about_tab: bool = True
+        self.is_scraping_posts: bool = False
 
-    login_form_path = '//form[@class="_9vtf"]'
-    username_input_path = '//input[@type="text"]'
-    password_input_path = '//input[@type="password"]'
-    login_button_path = '//button[@name="login"]'
-    meta_data_element = '//meta[@name="description"]'
-    avatar_element_path = "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div[1]/div/a/div/svg/g/image"
-    beside_avt_container = (
-        '//div[@class="x9f619 x1n2onr6 x1ja2u2z x78zum5 xdt5ytf x1iyjqo2 x2lwn1j"]'
-    )
-    page_name_element_path = '//div[@class="x1e56ztr x1xmf6yo"]/span/h1'
-    close_button_path = '//div[@class="x92rtbv x10l6tqk x1tk7jg1 x1vjfegm"]'
-    about_tab_element_path = "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[3]/div/div/div/div[1]/div/div/div[1]/div/div/div/div/div/div/a[2]"
-    contact_and_basic_info_elements_path = "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div/div/div/div[1]/div/div/div/div/div[2]/div/div/div/div"
+        self.login_form_path = '//form[@class="_9vtf"]'
+        self.username_input_path = '//input[@type="text"]'
+        self.password_input_path = '//input[@type="password"]'
+        self.login_button_path = '//button[@name="login"]'
+        self.meta_data_element = '//meta[@name="description"]'
+        self.avatar_element_path = "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div[1]/div/a/div/svg/g/image"
+        self.beside_avt_container = (
+            '//div[@class="x9f619 x1n2onr6 x1ja2u2z x78zum5 xdt5ytf x1iyjqo2 x2lwn1j"]'
+        )
+        self.page_name_element_path = '//div[@class="x1e56ztr x1xmf6yo"]/span/h1'
+        self.close_button_path = '//div[@class="x92rtbv x10l6tqk x1tk7jg1 x1vjfegm"]'
+        self.about_tab_element_path = "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[3]/div/div/div/div[1]/div/div/div[1]/div/div/div/div/div/div/a[2]"
+        self.contact_and_basic_info_elements_path = "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div/div/div/div[1]/div/div/div/div/div[2]/div/div/div/div"
 
 
 class FacebookAbout(ScrapeResult):
@@ -82,34 +104,66 @@ class FacebookKOL(ScrapeResult):
 class FacebookScraper(WebScraper):
     def __init__(self, config: FacebookConfig) -> None:
         super().__init__(config)
+        self.lock = threading.Lock()
+        self.driver_queue = queue.Queue()
+        self.exceptional_driver_queue = queue.Queue()
+        self.chrome_options = conv_chrome_options(
+            config.chrome_options, config.experimental_options
+        )
         self.config = config
         self.__is_logged_in = False
 
-    @override
-    def _run(self, executor: ThreadPoolExecutor, urls: List[str]) -> None:
-        for i, url in enumerate(urls):
-            kol = FacebookKOL(i, url)
-            with self.lock:
-                self.result.append(kol)
-
-        if self.config.is_scraping_general_info:
-            for url, kol in tqdm(zip(urls, self.result)):
-                executor.submit(self.__scrape_url, url, kol)
-
-        if self.config.is_scraping_about_tab or self.config.is_scraping_posts:
+    def __setup(self):
+        try:
             for _ in range(self.config.n_workers):
-                driver = self.driver_queue.get()
-                driver.get(driver.current_url)
-                try:
-                    self.__handle_login_from_redirecting(driver, driver.current_url)
-                except NoSuchElementException:
-                    self.__handle_login_from_kol_page(driver)
-
+                driver = webdriver.Chrome(
+                    service=Service(ChromeDriverManager().install()),
+                    options=self.chrome_options,
+                )
                 self.driver_queue.put(driver)
+            for _ in range(self.config.n_exceptional_workers):
+                driver = webdriver.Chrome(
+                    service=Service(ChromeDriverManager().install()),
+                    options=self.chrome_options,
+                )
+                self.exceptional_driver_queue.put(driver)
+            logging.info("Started the drivers succesfully")
+        except Exception as e:
+            logging.info("Starting the drivers failed")
+            logging.error("Error: ", e)
 
-        if self.config.is_scraping_about_tab:
-            for url, kol in tqdm(zip(urls, self.result)):
-                executor.submit(self.__scrape_about_tab, url, kol)
+    @override
+    def close(self) -> None:
+        while not self.driver_queue.empty():
+            self.driver_queue.get().quit()
+
+    @override
+    def run(self, urls: List[str]) -> None:
+        self.__setup()
+        with ThreadPoolExecutor(max_workers=self.config.n_workers) as executor:
+            for i, url in enumerate(urls):
+                kol = FacebookKOL(i, url)
+                with self.lock:
+                    self.result.append(kol)
+
+            if self.config.is_scraping_general_info:
+                for url, kol in tqdm(zip(urls, self.result)):
+                    executor.submit(self.__scrape_url, url, kol)
+
+            if self.config.is_scraping_about_tab or self.config.is_scraping_posts:
+                for _ in range(self.config.n_workers):
+                    driver = self.driver_queue.get()
+                    driver.get(driver.current_url)
+                    try:
+                        self.__handle_login_from_redirecting(driver, driver.current_url)
+                    except NoSuchElementException:
+                        self.__handle_login_from_kol_page(driver)
+
+                    self.driver_queue.put(driver)
+
+            if self.config.is_scraping_about_tab:
+                for url, kol in tqdm(zip(urls, self.result)):
+                    executor.submit(self.__scrape_about_tab, url, kol)
 
     def __scrape_general_url(self, driver: webdriver.Chrome, kol: FacebookKOL) -> None:
         try:
@@ -182,7 +236,7 @@ class FacebookScraper(WebScraper):
         driver = self.driver_queue.get()
         driver.get(url)
         try:
-            logging.info(f"Start scraping {kol.pageName}")
+            logging.info(f"Start scraping {kol.pageName}'s about tab.")
             about_tab_element = None
             try:
                 about_tab_element = driver.find_element(

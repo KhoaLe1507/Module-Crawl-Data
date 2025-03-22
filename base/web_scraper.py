@@ -1,15 +1,7 @@
-from dataclasses import dataclass
 import os
 import json
-import threading
-import queue
-import logging
 from typing import List, Dict, Any
-
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from concurrent.futures import ThreadPoolExecutor
+import logging
 
 
 def get_lines(filepath: str) -> List[str]:
@@ -19,25 +11,9 @@ def get_lines(filepath: str) -> List[str]:
     return urls
 
 
-def conv_chrome_options(
-    chrome_options: List[str], experimental_options: List[tuple]
-) -> webdriver.ChromeOptions:
-    result = webdriver.ChromeOptions()
-    for option in chrome_options:
-        result.add_argument(option)
-    for option in experimental_options:
-        result.add_experimental_option(*option)
-    return result
-
-
-@dataclass
 class Config:
-    chrome_options = ["start-maximized"]
-    experimental_options = [
-        ("prefs", {"profile.default_content_setting_values.notifications": 2})
-    ]
-    n_workers: int = 1
-    n_exceptional_workers: int = 1
+    def __init__(self) -> None:
+        self.logging_file: str | None = None
 
 
 class ScrapeResult(object):
@@ -78,46 +54,21 @@ def export_json(data: List[ScrapeResult], filepath: str) -> None:
 
 class WebScraper(object):
     def __init__(self, config: Config) -> None:
+        if config.logging_file:
+            logging.basicConfig(
+                filename=config.logging_file,
+                level=logging.INFO,
+            )
+        else:
+            logging.basicConfig(level=logging.INFO)
         self.config = config
-        self.lock = threading.Lock()
-        self.driver_queue = queue.Queue()
-        self.exceptional_driver_queue = queue.Queue()
-        self.chrome_options = conv_chrome_options(
-            config.chrome_options, config.experimental_options
-        )
         self.result: List = []
 
-    def __setup(self):
-        try:
-            for _ in range(self.config.n_workers):
-                driver = webdriver.Chrome(
-                    service=Service(ChromeDriverManager().install()),
-                    options=self.chrome_options,
-                )
-                self.driver_queue.put(driver)
-            for _ in range(self.config.n_exceptional_workers):
-                driver = webdriver.Chrome(
-                    service=Service(ChromeDriverManager().install()),
-                    options=self.chrome_options,
-                )
-                self.exceptional_driver_queue.put(driver)
-            logging.info("Started the drivers succesfully")
-        except Exception as e:
-            logging.info("Starting the drivers failed")
-            logging.error("Error: ", e)
-
     def run(self, urls: List[str]) -> None:
-        self.__setup()
-        with ThreadPoolExecutor(max_workers=self.config.n_workers) as executor:
-            self._run(executor, urls)
-
-    def _run(self, executor: ThreadPoolExecutor, urls: List[str]) -> None:
-        _ = executor
         _ = urls
 
     def close(self) -> None:
-        while not self.driver_queue.empty():
-            self.driver_queue.get().quit()
+        pass
 
 
 # EOF
