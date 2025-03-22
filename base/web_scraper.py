@@ -3,7 +3,8 @@ import os
 import json
 import threading
 import queue
-from typing import List, Dict
+import logging
+from typing import List, Dict, Any
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -16,13 +17,6 @@ def get_lines(filepath: str) -> List[str]:
         urls = [line.strip() for line in f.readlines()]
 
     return urls
-
-
-def export_json(data: List[Dict], filepath: str) -> None:
-    dirpath = os.path.dirname(os.path.abspath(filepath))
-    os.makedirs(dirpath, exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
 
 
 def conv_chrome_options(
@@ -46,6 +40,42 @@ class Config:
     n_exceptional_workers: int = 1
 
 
+class ScrapeResult(object):
+    def __init__(self) -> None:
+        self.other = {}
+
+    def __getitem__(self, key: str) -> Any:
+        if key in self.__dict__:
+            return self.__dict__[key]
+        elif key in self.other:
+            return self.other[key]
+        else:
+            self.other[key] = None
+            return self.other[key]
+
+    def __setitem__(self, key: str, value) -> None:
+        if key in self.__dict__:
+            self.__dict__[key] = value
+        else:
+            self.other[key] = value
+
+    def to_dict(self) -> Dict:
+        result = self.__dict__.copy()
+        for key, value in self.__dict__.items():
+            if isinstance(value, ScrapeResult):
+                result[key] = value.to_dict()
+
+        return result
+
+
+def export_json(data: List[ScrapeResult], filepath: str) -> None:
+    d = [obj.to_dict() for obj in data]
+    dirpath = os.path.dirname(os.path.abspath(filepath))
+    os.makedirs(dirpath, exist_ok=True)
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(d, f, indent=4, ensure_ascii=False)
+
+
 class WebScraper(object):
     def __init__(self, config: Config) -> None:
         self.config = config
@@ -55,7 +85,7 @@ class WebScraper(object):
         self.chrome_options = conv_chrome_options(
             config.chrome_options, config.experimental_options
         )
-        self.result: List[Dict] = []
+        self.result: List = []
 
     def __setup(self):
         try:
@@ -71,10 +101,10 @@ class WebScraper(object):
                     options=self.chrome_options,
                 )
                 self.exceptional_driver_queue.put(driver)
-            print("Started the drivers succesfully")
+            logging.info("Started the drivers succesfully")
         except Exception as e:
-            print("Starting the drivers failed")
-            print("Error: ", e)
+            logging.info("Starting the drivers failed")
+            logging.error("Error: ", e)
 
     def run(self, urls: List[str]) -> None:
         self.__setup()
@@ -88,3 +118,6 @@ class WebScraper(object):
     def close(self) -> None:
         while not self.driver_queue.empty():
             self.driver_queue.get().quit()
+
+
+# EOF

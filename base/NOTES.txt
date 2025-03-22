@@ -1,2 +1,8 @@
+2025-03-22:
+10:00
 Đây là khu vực dành cho codebase.
 Đang trong quá trình xây dựng.
+
+17:00
+Tạo một file "secret.txt" tại thư mục chính của repo
+để lưu username và password cho tài khoản fb
