@@ -11,7 +11,9 @@ if __name__ == "__main__":
 
         username = secret_info["username"]
         password = secret_info["password"]
-        config = FacebookConfig(username=username, password=password)
+        config = FacebookConfig()
+        config.username = username
+        config.password = password
         scraper = FacebookScraper(config)
         urls = get_lines("base/facebook_urls.txt")
         scraper.run(urls)
