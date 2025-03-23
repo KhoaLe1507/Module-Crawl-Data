@@ -1,0 +1,1468 @@
+INFO:my_logger:Starting the drivers
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\DELL\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver.exe] found in cache
+INFO:my_logger:Start the drivers succesfully
+INFO:my_logger:Starting the exceptional drivers
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [C:\Users\DELL\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver.exe] found in cache
+INFO:my_logger:Start the exceptional drivers succesfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/MTP.Fan
+        --> Likes: 13,036,165
+        --> Talking about: 67,794
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/444489138_1019981339484259_4504008877707254740_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=XFUNoAlUN-AQ7kNvgGoH-YC&_nc_oc=AdnnGgVXQ8vO80tfp7T6z2McNzTsnCM
+qPvWZ_94HXkOsE4cbStUmr_d0JUW3YR83K-Ypem2k0O6I2dKWz8M76PF0&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=XLlYV_24M9CfXWANJOHQoQ&oh=00_AYGecQC5SGlDrzVirgCUtNQ1ryo6UW0CUwQTM3OClA_WNw&oe=67E5B5DE
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/444484446_1020563112759415_4121857495037451150_n.png?stp=dst-png_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=F8okEaVxPWMQ7kNvgFOSgch&_nc_oc=AdlV1fIsevBoREdw-IeWddaPgrvcDHTt1
+DaWspTT1HzWTl9XJnFPPKMXM6DsB_hlMNmypna0Hcig69DT1r_GjuJf&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=XLlYV_24M9CfXWANJOHQoQ&oh=00_AYGP_OwRgiCCALtiMbij09yAldom7c24s5b5At05oLfRHQ&oe=67E5A9FD
+        --> Page name: M-TP 
+        --> followers: 14M
+        --> following: 4
+ERROR:my_logger:'charmap' codec can't encode character '\u01a0' in position 32: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of M-TP  with url https://www.facebook.com/MTP.Fan successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/denvau
+        --> Likes: 3,867,530
+        --> Talking about: 3,648
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/473790825_1152362429580546_2878070850937648042_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=97Dh-apYt3EQ7kNvgGuMLVj&_nc_oc=AdkWFlEhObMVBHW5okXEanr_Rbjpszv
+4T_FJ15l6i_cLjqS3tHhyLdQoiRH09XgqHq5Lo8AWVXqZB2QX4D-DszG5&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Kmb_s6RidSsXY9q_BXNYtg&oh=00_AYGeP4AeXYga46cTZ6S7WtOmQH58E5ewh7w7XWN5FBy_rw&oe=67E5BB47
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/480581956_1174183040731818_189146648370235900_n.jpg?stp=cp6_dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=exBVKLlaoXoQ7kNvgFIOf_2&_nc_oc=AdntQldolY7WuY0AF6azxtrcmq
+6Ov7qvs48DUdCBgG0kP-4p551sDugzbTAH4EcRzeM7VfGaARkZeWmSAr-Qc5fY&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Kmb_s6RidSsXY9q_BXNYtg&oh=00_AYHCuPw9QjTDdT9w39dSJsCUF2NnZoyuCYp51sQ6KEVlcg&oe=67E5AE95
+ERROR:my_logger:'charmap' codec can't encode character '\u0110' in position 23: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of \u0110en Vâu  with url https://www.facebook.com/denvau successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/HIEUTHUHAIOFFICIAL
+        --> Likes: 2,302,959
+        --> Talking about: 125,347
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/385780595_784340566826510_8513447287827069210_n.jpg?stp=c4.10.940.940a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=WXDC25ihT24Q7kNvgFVXlps&_nc_oc=AdnQmygXrdxakwINa
+cpUQUPD3PMfBEZ6OjryL_hWOqR4YunL0wOLPiViu_Q85pQT-KRkruVJQxoBQSc5KBBfkIG9&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=RBP9dYpAyslS0jStUoEnwA&oh=00_AYFvyWqea3FR5vxj7Fi0C4BD81nOAZalDI4C9LuObPttiw&oe=67E5A3CA
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/482221556_1115786217015275_3474202550585454714_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hxgfmpMpLP4Q7kNvgFVKCup&_nc_oc=AdnlMfQu9BCg69dDQpl4wADH6bz4E
+OKXj_RW1bBuoDzJMxUxmkn7vp0jLPwILStAShM33tUbcTEomSNCjWa-go5S&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=RBP9dYpAyslS0jStUoEnwA&oh=00_AYEamA0Zxc6TeYQs7JGXv5NZrYFuWQbKFydJKKamS99Grw&oe=67E5BDE5
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea7' in position 39: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of HIEUTHUHAI 
+(Tr\u1ea7n Minh Hi\u1ebfu) with url https://www.facebook.com/HIEUTHUHAIOFFICIAL successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/chipupu93
+        --> Likes: 7,950,018
+        --> Talking about: 34,079
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/462767055_1129695001856611_1338910785056659372_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=PiYp-f8VsYwQ7kNvgEZkjM9&_nc_oc=AdnoArvVRQKrK5Pu1F-o_GW-SvqkFx-
+WWOl4H5GSigzjKHMKDLwPBaf-JdvMrnFKIE3wMSZRWe5GrAVlZduPMDyZ&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=aIezE4D7gKQyFVWUwqERCw&oh=00_AYEariQrxvWbbBRi40DZG8BwlZFbkh2BZF3jIDAcOtkHXA&oe=67E5B380
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/480772445_1220995129393264_9079898635077339503_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=xVKEFOqY260Q7kNvgFv30Uh&_nc_oc=AdlnVmnPuXQXgbxeIKr1VXYL_Weli
+2-7FX8a4GwqckKlpmkvUELd8UGNXW74Z4-7vbrvl6tpxxXsacGL9WBeQX9p&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=aIezE4D7gKQyFVWUwqERCw&oh=00_AYEPdM3gchWBBGhXTra3TidjKBgWt_4pJpphl3exJYB-hg&oe=67E5980C
+        --> Page name: Chi Pu 
+        --> followers: 9M
+        --> following: 5
+        --> Intro description: Vietnamese Singer & Actress
+
+CONTACT:
++84365370293 (Ms. Joy)
++84944194377 (Mr. Tuan)
+
+EMAIL: chipu@the1st.vn
+INFO:my_logger:Scrape the page of Chi Pu  with url https://www.facebook.com/chipupu93 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/mono.hng
+        --> Likes: 404,844
+        --> Talking about: 13,081
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/464011190_516327891162556_870897904686894454_n.jpg?stp=c632.87.1000.1000a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=OJ6Lc7Y4_mUQ7kNvgHOly58&_nc_oc=AdnPGKkypfluCl
+18u7CncwY_56BUDO7rHJIn5AMHUjYL_d4tX6Ps4_aZNLqar5va7LUVA7N_JEeLe_Iq2GIRGgBm&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=HpIR4fFbUP02hGju8hJv7A&oh=00_AYG7PEIdPuB8c2S4E_g6nsxc3TLlo4KvW8EvKcFQszIMqg&oe=67E5A318
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/483567096_615935441201800_3091911371918817480_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=xgwUK3laEawQ7kNvgHp0_ga&_nc_oc=AdmApjIBCpvqHMbrk71EnUXHhkqnhR
+60AKiFO7dVqqxQ4rRJtjqddA8XxtgJqMuakb4rc2wqXC3fgZIehKTIyhZt&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=HpIR4fFbUP02hGju8hJv7A&oh=00_AYEtIDyGARbyNVj9xts2pVIKb0DuIujE4-O3YsH_tYls3Q&oe=67E5B995
+        --> Page name: Mono 
+        --> followers: 518K
+        --> following: 5
+ERROR:my_logger:'charmap' codec can't encode characters in position 54-56: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Mono  with url https://www.facebook.com/mono.hng successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/chaubui.official
+        --> Likes: 1,676,967
+        --> Talking about: 34,085
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/462134958_1075241283967409_8368644159599530703_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=gkpWfqrozM8Q7kNvgGsLBL6&_nc_oc=AdmM-cn7F9c3JI_grNHhSDq1wmHmciH
+cIXW0nig377X1voHf1or0nllTSd665Cs4LXYt6ISoN8OSYFh0COh5sVcu&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=8qGM01JYUNB6mKxV2ihgKQ&oh=00_AYEwGMs6DTcFQUEqaTTALj7Cvrt5Y4I6BnN9q63laAaLCw&oe=67E5B383
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/480572846_1171458721012331_5333868624986140403_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=YQ4luI3nkkQQ7kNvgEvR2aG&_nc_oc=Adkg8wzojANDJ9suSpJA0I0NDCbE1
+I_vvr2jhfYEH5wJI0oiAlVuq25UlXX-3cApM1GHajaPpxc9s29ENtEKL6Is&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=8qGM01JYUNB6mKxV2ihgKQ&oh=00_AYHF77Icg2eOcQReMzXaExh8KJ_anvANMnqDGSn_5GO9gw&oe=67E5AF0E
+        --> Page name: Chau Bui 
+        --> followers: 2.3M
+        --> following: 3
+        --> Intro description: Where a girl shares her journey to fashion, with the hope of bringing positive lifestyle inspiration.
+INFO:my_logger:Scrape the page of Chau Bui  with url https://www.facebook.com/chaubui.official successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/fromninhduonglanngoc
+        --> Likes: 3,519,533
+        --> Talking about: 71,301
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/461824890_1089017392591637_204709411240812178_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=eVBkD-cAIXgQ7kNvgGikUN3&_nc_oc=Adm5Qfx0YFU-G1B20yapiIXuHtWYLoEH
+yTPot-2s5eq7ja0Jys6ya7ZtYRK59eIM-Zut8QaTeCdgtRyN_2_UTP4I&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=BCjMs2aI9m_g6-VD48lUnw&oh=00_AYFygXuFlioDOCT-oamTn0WVaWDyZ_b2h76tQHXQ11efyg&oe=67E5965C
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/484871751_1207786204048088_8215213258260986130_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=vbH2QEyYeggQ7kNvgHLyKYQ&_nc_oc=AdkZofEqpthz7-RzH1tL0qgm-oSNv
+lKSUpL2pN7ifpeqFFTCT0nGUdxsY9dIeNZna8neZIf4RxqF2ML4pAkBYl-0&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=BCjMs2aI9m_g6-VD48lUnw&oh=00_AYGiYh7FC3YtgdjLSQjyjL-HrubOWVcxGYLtQfBYVhiMPQ&oe=67E5AE8B
+ERROR:my_logger:'charmap' codec can't encode characters in position 29-30: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Ninh D\u01b0\u01a1ng Lan Ng\u1ecdc  with url https://www.facebook.com/fromninhduonglanngoc successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/tran.thanh.ne
+        --> Likes: 14,727,129
+        --> Talking about: 531,828
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/321243359_820226445737299_7396979274374649541_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=4wahHUuOZ18Q7kNvgHdLyrO&_nc_oc=Adms8b3kK9jHCXh3z69fDcOTTbztUsrN
+kPdOWavbB3Qa1zAmTL0aRCgBUeySjhbnGwO9eCjpKw_AbJ-1HOPI2uP9&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=cRHWSvMAdIRuElsaU8yZJw&oh=00_AYEuCbT3f7exRrCS89FEg9Cb9eYd82cPw2ya9dXZC1ZCVw&oe=67E5A9B9
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/476440098_1220054152818185_5928861913996530550_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=uaB-oLWg0U0Q7kNvgHeFd20&_nc_oc=AdnUS54-s-ZWBLnjlE_tid_3Ng3-h
+c9uWhN9F8PiP2LXebro6tKOUCoqI0jf4gR5DRYHP1c99Np3GOHsh34qicPm&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=cRHWSvMAdIRuElsaU8yZJw&oh=00_AYEmdSD-JX7WhZaSijv4NFkx7y0FvffZ7MbgpqGqZ3YiQA&oe=67E596C0
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea5' in position 25: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Tr\u1ea5n Thành  with url https://www.facebook.com/tran.thanh.ne successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/quynhanh.shyn.94
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/TocTienOfficial
+        --> Likes: 1,776,882
+        --> Talking about: 21,005
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/475096957_1161982518617395_7295267951855673835_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=hWMv34R5aD0Q7kNvgHQnWFO&_nc_oc=Admx67_I1cGP9UaUJtPCEsA34Wiug
+6UzPEbSFUa-bAzo9P1T1P-kBykwu4jmbXG2ZHzMbPOZHLS_pbuAImQhfXmr&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=fenKrfYQIYC-MES_WwsYgg&oh=00_AYGhpI8fssUJbU3w2GI4a2HgHKvXlZmN9grfHL9vwvxyug&oe=67E5C3FA
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/485794138_1200922181390095_6543671983809791637_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2dmh9Vf-hPMQ7kNvgGq_ssX&_nc_oc=AdkKfV3k4lJRaN4n4t1bf_npNnW5Y
+ci-9hd3_vTRVWeJo7bq8mv9HqV29_zxLPC9zJU0sIEi2ErIhEn9Cj-aBZFp&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=fenKrfYQIYC-MES_WwsYgg&oh=00_AYG6x2QDdtv9lma_mP9BjkXPNnMoia0nfgPMT6t95vn6FQ&oe=67E59B16
+        --> Page name: Tóc Tiên 
+        --> followers: 2.6M
+        --> following: 11
+        --> Intro description: THIS IS THE OFFICIAL FANPAGE OF TÓC TIÊN!
+
+Business enquiries: Mr.Tùng minhtung.ly@gmail.com
+INFO:my_logger:Scrape the page of Tóc Tiên  with url https://www.facebook.com/TocTienOfficial successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/officialbinz
+        --> Likes: 1,786,036
+        --> Talking about: 30,832
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/484716065_1323670809122252_7897483573648785523_n.jpg?stp=c0.0.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=YN2ND2XDCIcQ7kNvgGPRWFW&_nc_oc=AdlfZc_rKaddRos
+xNuwGe3VZK2t7zBemENRlgyxyg1CIPNAr8QAvXXSpOOvVSFslc-X_vhyUWvEUPzQBafVcHsJP&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=GlG9IOSfSMabWGQ3ebZY0Q&oh=00_AYFrsJf_uY2t9UwH6Ug0dGbFGLMXUV_dBjEvxbzfyUZdRQ&oe=67E5BA76
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/468445980_1248833676605966_3940647446547451688_n.png?stp=dst-png_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=D6462anxSlcQ7kNvgFJYTsX&_nc_oc=AdnMLj_rJrdGik4SJV59ANRAfGslR32rm
+NYhHLAoi21XpkX5eOIxlSxiGRCjNnEjSV4ngxnFK8YOjxZ2k0DuMODy&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=GlG9IOSfSMabWGQ3ebZY0Q&oh=00_AYFHr0uJfkNCf7G0RBm3qW_j0kyHD0PRlnnekEpvpQyDag&oe=67E5B9AA
+        --> Page name: Binz Da Poet 
+        --> followers: 3.3M
+        --> following: 8
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea6' in position 38: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Binz Da Poet  with url https://www.facebook.com/officialbinz successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/dongnhi
+        --> Likes: 8,445,985
+        --> Talking about: 26,922
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/474813143_1185676666252224_8824739207101409372_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=fASIN0oq3i0Q7kNvgHCIqOi&_nc_oc=AdkVnRA-Tg91GzLwglE6qmkVb-JjZ
+YpaHRWtZCL_yWPk8MuSMY4-7O_EJzs70vMNqmgzYCEXLDH0J0gyetoL4qTj&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=yvphDt65792nLgjaGS-fOQ&oh=00_AYHuGlaQT5SA5wZaHc0VwEm5GaVY3Wva6A6ANDRG9lYwaw&oe=67E5A5AD
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/481456000_1212122803607610_8694683544384363624_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=W6SsGFw6ZXcQ7kNvgFCGWJP&_nc_oc=Adm_cMqVm8ydFAyFrQk3PgKVhFXFt
+pkuiEg-57plUvz8LEDLEeatI_BnGKbsAkYSQ3wutTK0yaOtLqUzI541qb6L&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=yvphDt65792nLgjaGS-fOQ&oh=00_AYHSASoYUKkz6S7GsZZNWXCk-1Yt-VRZRftyR50QZMDRvA&oe=67E59CB1
+ERROR:my_logger:'charmap' codec can't encode character '\u0110' in position 23: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of \u0110ông Nhi  with url https://www.facebook.com/dongnhi successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/quangtrung.trung
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/phuocthinh.noo
+        --> Likes: 3,372,515
+        --> Talking about: 66,502
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/473695473_1179742603518576_4036653646640662012_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=qNdg4Zs38VkQ7kNvgHDcQJ9&_nc_oc=Adn6nhHiS-KIfwSq9mCSzOBiXpvwykh
+R221reFwL70SvDQHXqd21ylrl8uZV9eFRBwHkVINRUSByvZXqPQBX_6Zk&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=uY5SsempDluGwZv0TFb93g&oh=00_AYHZn2DjCmnNC95Pxl1lhB_WtU1Y6xg60bLZjfe5K-LWMw&oe=67E58DD9
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/484337411_1220709286088574_8785325844191821784_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=YywDqD-4y8UQ7kNvgE2s4Dn&_nc_oc=Admc-PBng4dmNN2SNckESUtscOROe
+eRXPGaveB6wx7J1eYaZ906THd5q5ZP-6s-Rw3BGhFAGbgV1yQGVf_pbWJl0&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=uY5SsempDluGwZv0TFb93g&oh=00_AYEjdrbKA-lYiUBefQ-Q9jjH7hjK3xkIBYOTZ_2_PNKBGA&oe=67E5B0E6
+ERROR:my_logger:'charmap' codec can't encode characters in position 29-30: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Noo Ph\u01b0\u1edbc Th\u1ecbnh  with url https://www.facebook.com/phuocthinh.noo successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/min.official.min
+        --> Likes: 1,220,050
+        --> Talking about: 5,309
+ERROR:my_logger:'NoneType' object has no attribute 'attrs'
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/BbTranBbbgEntertainment
+        --> Likes: 1,195,513
+        --> Talking about: 80,670
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/472088807_1141635203987982_642374262023941976_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=r6AY95iJ3AkQ7kNvgFlrYHZ&_nc_oc=AdnbP-mtOkJ40_lr687uS60POUzBMK6z
+LIUYIZqXegZ6Wvnt-EVNGWhbpomE8jK8wfXo5WdmCO2g6UVBgm2Orp9k&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Ot1zw3ZqQPqyHeD77znWyQ&oh=00_AYH0FL4inz90dGEckXMmYVUAdZcxGEQgm0xPgmTr-WarBw&oe=67E5BFEC
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/478875460_1169718344513001_303674175390309124_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=a4mO8H0WHiYQ7kNvgH9I3V0&_nc_oc=AdkLDDW8gK_z24t_wXkO9waQlXc7J_
+NHcwHpvZ14L5jCyEZozHmoAMiXoxq2c8TmDa4nd8Nbvrok_8Nn59Jh4Sj4&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Ot1zw3ZqQPqyHeD77znWyQ&oh=00_AYFERwdcQLITx_3JYUWK5KOif5F4nmYOQ0rMKRhk6kSQ-g&oe=67E5B079
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea7' in position 28: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of BB Tr\u1ea7n  with url https://www.facebook.com/BbTranBbbgEntertainment successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/huonggiangidol.officialfanpage
+        --> Likes: 2,207,917
+        --> Talking about: 232,771
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/435086407_962815565203378_1017303326553284199_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=U7u8QOcM9ycQ7kNvgGg60_-&_nc_oc=Adkx7zXdfucsP9vFWiLG1gMXdyRWOAyX
+MaPGXUogux3At5OUI30BK3R5pC_vrcu6P_J3_8gA6agAk6c7elF3aghN&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=US-53YV--3ShKr0-O31bnQ&oh=00_AYEjzAwcLOcjiIeiIpzoZLzfQHZtFijKzFvNbkwNY2bVQQ&oe=67E5B144
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/476867135_1163176995167233_2708938713685146743_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=cq-EYElo208Q7kNvgFzY560&_nc_oc=AdmpfrxzV3PXOr5U9C7YcxTJa2gjt
+ghDo24kCXWCbvPHNLeZFxcatSaKnxMzHESuIDb688Q2XOhYmaT2AkK07Fyd&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=US-53YV--3ShKr0-O31bnQ&oh=00_AYEvWG04mXIN2vh5ttBVoeXsCttzjRWEgp1LLa2aU4ReZA&oe=67E5AECB
+ERROR:my_logger:'charmap' codec can't encode character '\u1ead' in position 28: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Hoa H\u1eadu H\u01b0\u01a1ng Giang  with url https://www.facebook.com/huonggiangidol.officialfanpage successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/hoanglongmck
+        --> Likes: 534,999
+        --> Talking about: 1,157
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/334199204_524960329745555_5355258949075402918_n.jpg?stp=c0.169.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=2_b3k9c315gQ7kNvgHNNaxF&_nc_oc=AdlIsaW5L7FR
+3oHQb-yt4NtMAh3Xst403libu7lF2kr7teWAzWQRpD3n-hJ0mqT29STDQybkL2P2et4XTKAJZ_NB&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=nqnIzU6B0rTp2aUdkYywjA&oh=00_AYG3WNJ5uN0fel3KJlGfGaIuOxsFzbUhcceUUA9sBrf9XA&oe=67E5BC3D
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/473618440_1040132337918185_2516562200673020113_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=FyMWq0Ira_UQ7kNvgGh49oY&_nc_oc=AdmBIvhxOByDx805PpsytSR3AxhXEgUdJlziEUlXfVDgdt3gNiS0En
+KSMk7wi5_2NpNPriT0w4oYdGn5dwIJnhHl&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=nqnIzU6B0rTp2aUdkYywjA&oh=00_AYHokYyLYoE6HmSpEPEDU2lBQ2swlKk8SaN7AsJBj94FuA&oe=67E5A4B6
+        --> Page name: MCK 
+        --> followers: 888K
+        --> following: 22
+        --> Intro description: Hanoi born and raised.
+RPT
+MGMT: MCKblowsurmind@gmail.com
+INFO:my_logger:Scrape the page of MCK  with url https://www.facebook.com/hoanglongmck successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/PhiPhuongAnh.vn
+        --> Likes: 411,097
+        --> Talking about: 4,188
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/453968674_1030420915114054_8575128936152310961_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=GLrjrnrNNe0Q7kNvgFJHX9H&_nc_oc=AdlNm5rQGyJUuIXME9ys_W4kaJPer4B
+ZEFeuM73J8232qF_D2_PyyQAYDu8TTKXoUjlCBIf1a-TBptqtSf4_aJg0&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=0s3P356Xr3-5fQHPEwfqDw&oh=00_AYEBg3ueephAIDcAQIkBPtLA7UyxsTLSiSqatxvVa7aIJw&oe=67E5A57D
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/481115506_2320949191621566_6912938349048384282_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=11Cwg67RKYsQ7kNvgERtB5R&_nc_oc=Admgjh2WakTy8vWG6C5thh7ZdUgHB
+31DcF7XijqRNmiEn0jXwxr0_JO-SkyjnK1pxNfuwme-r2YrPYf3Z54T2B_q&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=0s3P356Xr3-5fQHPEwfqDw&oh=00_AYGWCGpXLvXr54PBo6NPUyeZjNwwGofZcr6MH2yghDeuxA&oe=67E5B1E0
+ERROR:my_logger:'charmap' codec can't encode characters in position 29-30: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Phí Ph\u01b0\u01a1ng Anh  with url https://www.facebook.com/PhiPhuongAnh.vn successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/TruongGiangDanhHai
+        --> Likes: 2,665,271
+        --> Talking about: 31,855
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/457260272_1059738082174368_3805376495822119997_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Rs2pDN-vl68Q7kNvgEjpQ9c&_nc_oc=AdnAA6lsoqwUwkffbAq8iDnpHvuc-4q
+WVlgvfmWkFNM5xV_1BAJMvtuIqQZEltnz1_W56gUcroPgPGLeitMKwpSU&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=3xkikEFaeBbyF49ClSNj6Q&oh=00_AYH26ifO6F09sD3TyDgvu220y6d8H6JNKs1H6vE6TCPluw&oe=67E5C17C
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/481045682_1183849963096512_6907111541350917564_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NwyN_R1fCa0Q7kNvgGA2UMS&_nc_oc=Adl0LCfbhof1nQ52B3qwIrCjFOIpX
+GJt-W4A3Gq5dhDyeLefL5OXG7z0OKtWDvh5KDC8LO1OORi6-1vzbFFlfYjL&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=3xkikEFaeBbyF49ClSNj6Q&oh=00_AYFCP_Cwj4qdMnUVr9B-Ry9dpX0qga7aH6ruDkuvax3nNw&oe=67E59725
+ERROR:my_logger:'charmap' codec can't encode characters in position 25-26: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Tr\u01b0\u1eddng Giang  with url https://www.facebook.com/TruongGiangDanhHai successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/HHennieOfficial
+        --> Likes: 2,397,768
+        --> Talking about: 491,444
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/322404719_508774354683296_3089097408178624051_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=wqFiRecMxFsQ7kNvgHqeSCu&_nc_oc=Adl3YYgYverBxMtC7CFggPpnAzpE8OAq
+3ZhbbvM45oNg7y6m2dj4Jtb7YQa1fvlvJ6n3OeeRrJyh5lH-goQkVRn0&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=3ZhNXNbuOl084sMF4eUqGA&oh=00_AYG1jvmM2_ajGBFcnV5cCHpN0A88HdJStuYwhTk60CU2Sg&oe=67E5C14D
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/475301183_1222907025868334_3388425792398504572_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=9siNlt2iPrcQ7kNvgHK5nHq&_nc_oc=Adlv70aYkFns8969X6RG2xa007Jqw
+n4QxPz8dSbpixyuSkktJCylqsGsOW1hBGlhoQr2kLssM-FqV2l0-_-GZfvK&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=3ZhNXNbuOl084sMF4eUqGA&oh=00_AYHSjy7RBx_SzGO-p_QGtYjQXQVqzg96k7BYsC7buPGu3g&oe=67E5B891
+        --> Page name: H'Hen Niê 
+        --> followers: 2.7M
+        --> following: 1
+ERROR:my_logger:no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div[2]/div/div[1]/div[2]/div/div[1]/div/div/div/div/div[2]/div[1]/div/div/span"}
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+INFO:my_logger:Scrape the page of H'Hen Niê  with url https://www.facebook.com/HHennieOfficial successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/DvTuanTran
+        --> Likes: 2,142,099
+        --> Talking about: 30,131
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/463738342_1126878485466675_5095368592042248685_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=V_mmkAXy0wcQ7kNvgFWbfOj&_nc_oc=AdkCmq0_c4pRno0DbtMPeAJuzMS34Ut
+7as0afEn6AHXMM8Fk3R25rd2N15JNyD0UmnmM_0qoAqZhRh9KuZgzGSaj&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=gcmX_lAmPyY_uiaxxteA4w&oh=00_AYHQznzZ7fcrHSSju4nA1yKeILQ2vraMJLjkXVY2GUk9XQ&oe=67E5B89C
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/476403826_1209357793885410_3610190464084157579_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=TF2MND2sp2oQ7kNvgH4h6Lr&_nc_oc=AdmuH-y4I6T6XIfjzg9UAtGN8xWIV
+lJBW0fmuo-Q3g1PtuPGNSmM38L2UEFGfRrJDLdipvE2WkE4pMKT2G0XA7mx&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=gcmX_lAmPyY_uiaxxteA4w&oh=00_AYH3yDBPVg5fd7hUQ-a_GvVsVIRpeUgx4MZOoYRp8TKl-A&oe=67E5B594
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea5' in position 25: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Tu\u1ea5n Tr\u1ea7n  with url https://www.facebook.com/DvTuanTran successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/salim21.official
+        --> Likes: 1,171,670
+        --> Talking about: 248,961
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/453222981_1020861382735686_565930307464012719_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=qyfvNKnx-XIQ7kNvgHGEIE7&_nc_oc=AdkKyNvTl3CC0GRcTYg7C9LCFjvg73
+-FRUP1rl5S-mshhX1rpi6ehPMOcFUS6zLsL66TzPfTauMdw-lFbv7-7ko4&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=F6SEJClGTrXRgc-_K8anYg&oh=00_AYEHq32qd-ohAtLjytVPVA27S-Rpmp2CwjO9hQ-miBYsGg&oe=67E5AEE9
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/480242255_1159913512163805_5545555272694693604_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MDyoBgDrAZ8Q7kNvgHY1GcD&_nc_oc=Adk_meiqPsRzKUeXfpmlWeawPFihK
+Hpm2O0P0XMHVVotiFMPVZAR1c_69FMBUirG2qsZ8xX1cu8OpRoCc7aacbcv&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=F6SEJClGTrXRgc-_K8anYg&oh=00_AYGNhuZwRMaqRYQ5Fw4_Kgf7TcSJrhlA_KE3I_46OhGatw&oe=67E5A263
+        --> Page name: Salim 
+        --> followers: 1.1M
+        --> following: 24
+ERROR:my_logger:'charmap' codec can't encode character '\u1eb9' in position 32: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Salim  with url https://www.facebook.com/salim21.official successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/junpham247
+        --> Likes: 1,797,417
+        --> Talking about: 27,959
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/481898727_1223041339191268_5699899862608282280_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=tTXm5ISUUAUQ7kNvgHIPvic&_nc_oc=AdkDn0QaLhsaBM-s2rc0im426R-bl3j
+0_wItarPgTbwuktQ3gOZsNeIWY0r4fEtWJzaMXnpxcG_KN2iYqda-RSY6&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AzuU384HvRNdS02TsnL15A&oh=00_AYFOKJM9hDdQycva_7bhwnLrd3k0JJhDcC29rFdZHBDRiw&oe=67E5A6B7
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/471158812_1170451844450218_8764537236119014048_n.png?stp=dst-png_s960x960&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=bZqHO28OAVkQ7kNvgH2QbZe&_nc_oc=AdkCmPRlbLGUABmeSl0TS3jZzOQnAaX79
+utpzRQfrThWBSkvyhWBz3UHmSQRwCarQgXyJiCj2h2P_DtK0XF4RufQ&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AzuU384HvRNdS02TsnL15A&oh=00_AYHOBbUrsPybf-vLmGbA97TdWIeonmTdWzQ4LWYbqFE7Ag&oe=67E5AB5A
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea1' in position 29: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Jun Ph\u1ea1m  with url https://www.facebook.com/junpham247 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/LeHuynhThuyNgan.Official
+        --> Likes: 2,996,731
+        --> Talking about: 90,293
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/454739208_1028914775273240_1934858191965089693_n.jpg?stp=c0.32.1365.1365a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=bSSE-TXrROAQ7kNvgEfWqfF&_nc_oc=AdnQuUEhq9LH0M
+h8R95bsbTq83euFELziaflTdRv10PvXNJdgnMTzkdU9ZWrgX5K2ehgabcN7LnoZE02jna89MJ9&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Qsu0dtI7Ot0vl0hKdqc8hg&oh=00_AYHc0OcwOukdYeqU8HH_8Ky8-9BBp9cjVP35bS9CERA2kg&oe=67E5BBAD
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/476927712_1155096065988443_2058532475234202802_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=wWAxLcF5GukQ7kNvgGwuDEj&_nc_oc=AdkdK-1xHvjkHCFmOTs2F6ZQTprk3
+AepD0WwoYtfT_vHmsSmp72H4dDOb4S1NAxwbjVZ9PzDfaLX13Uu2XMFtSMH&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=Qsu0dtI7Ot0vl0hKdqc8hg&oh=00_AYG4x-7qKGmMiqAIXj_V5vQg_5-H8ua4hUvjHeHppkBNrA&oe=67E59B7B
+ERROR:my_logger:'charmap' codec can't encode character '\u1ef3' in position 28: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Lê Hu\u1ef3nh Thuý Ngân  with url https://www.facebook.com/LeHuynhThuyNgan.Official successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/page.ngoctrinh
+        --> Likes: 2,749,610
+        --> Talking about: 31,403
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/475164593_1155704325910807_4066150396506032795_n.jpg?stp=c0.0.720.720a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Cl9HHBe6LtMQ7kNvgEU7Pu3&_nc_oc=AdkqVGm6EazlX-MOU
+cyJgUXR9bXoo0HG6U51ZB-qYuF-6N04hejcKHo5M0fQDoATHadNZFVWWZWXhfgS_oOCZgkg&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=dxjSeibYFuExt6dcFX0ZFA&oh=00_AYHRvXb12x1KNYRm9ChzLJhW3b1dfI4TAO7hUOkahT64vQ&oe=67E5C112
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/482221427_1182319816582591_5637985322613835609_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=zEr3ukqBFPgQ7kNvgG2N_GG&_nc_oc=Adlo2uhajH7IBrEr9C6UbS_ODJkFh
+LxYf1RRnIaO73EGMYfgIYG0lXNA9QtP5lYNFf_lkI8Th4zc8P8H7ouVvx8V&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=dxjSeibYFuExt6dcFX0ZFA&oh=00_AYEX3JdDl-ipCLnqx3lP1aR93KyesgC_cfLeQS3BKco01Q&oe=67E599DF
+ERROR:my_logger:'charmap' codec can't encode character '\u1ecc' in position 25: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of NG\u1eccC TRINH  with url https://www.facebook.com/page.ngoctrinh successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/buianhtu.atus
+        --> Likes: 2,131,892
+        --> Talking about: 60,310
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/455862531_1100200838128889_8462203775430914642_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=hP462V3WNd8Q7kNvgGtAgyW&_nc_oc=AdlryUDyh1fCspbwcmJTstAwawM
+87ffEcSI-BrbrVecTxjD3DU6_SHrOC9RHq_ZV7HwtXlq-m0-ePdMYINL2AO6h&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=GZGZ-ICO2XQun0bffIv_TA&oh=00_AYHiatHeZNw1bbgjVj3DqysXl9ZTw09UI_oWCgaZVXYcRw&oe=67E5B9BB
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/482192481_1242921637190141_3225137018734695762_n.jpg?stp=cp6_dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2EQpvYRjdL0Q7kNvgFZCT_Y&_nc_oc=AdkAqTk7cgnZdFRQQuBAcBArr
+R9Y8c07igGi3WZCqfaIpkMLokVoLqFzGmIgT-ZVkFTtJFl2Qwt6FQfF0p6mVIAz&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=GZGZ-ICO2XQun0bffIv_TA&oh=00_AYEOlmk04urSGckMLhfjaC9eZ1H7FY845zqX0D3IouyUVw&oe=67E5A2DF
+        --> Page name: Anh Tú Atus 
+        --> followers: 2.2M
+        --> following: 2
+        --> Intro description: For booking, contact Ms An: 0981511508
+Mail: anhtuatus.official@gmail.com
+INFO:my_logger:Scrape the page of Anh Tú Atus  with url https://www.facebook.com/buianhtu.atus successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/TruongTheVinh.Official
+        --> Likes: 728,058
+        --> Talking about: 13,139
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/484530937_1310991593716536_126742045355647428_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=kCyL0JAtTeMQ7kNvgFVJzTY&_nc_oc=AdmiyOn2vk1MRwzK63K_dA2SsZwWcW
+lEX_A2svvLLzm7GbLXAXca37Qo-dlUoYxp1r9e_B7lueAAtNWxNHHYLFNc&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=fLWgrFkdRFBcK5JsfZbv3g&oh=00_AYFtkehb0PptBpyDlvZLEHN4z7q-4C_XcIa0ZGWMtdcJQg&oe=67E5B365
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/475583484_1282424993239863_8048762461401412470_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Z13Njqa0CpAQ7kNvgHBdkS5&_nc_oc=AdkNxCQRfxmCnQpmU8A5NyLl60Q4R
+0-Ch92chCjkKsWP4V-jnXzU2Dw1HvmlmY-aDvNyvsxkQnyy4o4HUFqvBCzG&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=fLWgrFkdRFBcK5JsfZbv3g&oh=00_AYERq81mgvbQE4raFX6A6Xn989ksWSsLVTzBqGnGRF4gJw&oe=67E593A2
+ERROR:my_logger:'charmap' codec can't encode characters in position 25-26: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Tr\u01b0\u01a1ng Th\u1ebf Vinh  with url https://www.facebook.com/TruongTheVinh.Official successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/linhka2020
+        --> Likes: 199,077
+        --> Talking about: 1,510
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/344560650_248358214376206_5484871329236180999_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=RbzBaLcmdMYQ7kNvgEwNwOt&_nc_oc=Adnm-NoY7B-JRUxGSqqMIN1KR-kvvR
+0ILpJps2gwTag7b9FVofIbYmiq9bcit7uISGvQP2Adcpo-LiE4p55v3ymf&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=R6PD_QcJDj4tv5UQ3YTEcg&oh=00_AYFk0ua-H1hluBNdeqnlpPg69d_8mvqCDfnvuKRbaUgP1g&oe=67E58F38
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/482087513_1094077229399673_4307603952578637064_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=51Kq6vJdtisQ7kNvgFd4POL&_nc_oc=Adk_p0MjfhFhlBHRRH6be3HRR909N
+W2hWkngckzUao75dc8TEMgDFFYFDdFBV9p62lI5_0bJ1CgxIlWwG8WjT2xp&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=R6PD_QcJDj4tv5UQ3YTEcg&oh=00_AYF_WbBmihhxhGn7Uf6cAA-ShIkTQ1JcFYjTCET7xxHedQ&oe=67E5B7A7
+        --> Page name: Linh Ka 
+        --> followers: 324K
+        --> following: 5
+ERROR:my_logger:'charmap' codec can't encode character '\u1eea' in position 37: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Linh Ka  with url https://www.facebook.com/linhka2020 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/lyhai.minhha/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/bichphuongofficial?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/Singer.LynkLee?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/erikerik.official?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/ducphuc.info?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/HVNS.Hoaminzy?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/QuanAP.Fanpage?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/LouHoang.Official?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/iamisaac365?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/TuanKietOfficial?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/songluan.6se?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/duonglamshowbiz?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/kieuminhtuan?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/NguyenThucThuyTien?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/Lylysuryy?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/xdieunhix?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/ameest319?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/khangansushiofficial?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/low.g.97/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/tlinhww?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/PhuongMyChi?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/phuongly.official?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/hoangku.nguyen?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/linh.green.58?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/maingo.nguoimau?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/julia.doan?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/hellytong?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/acupper.official?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/naomiroestelhuynh
+        --> Likes: 149,807
+        --> Talking about: 121
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/454569649_925767009354269_1282666769473638044_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=kvB8P-I2tHgQ7kNvgE0WzQy&_nc_oc=AdkfqaMSpwCSEnyOOKisERUn_jZQ5s
+kW2te9ac71X9QwcNaUwmun6o83dfRjxc9uluoJMMSfv9ihDE7AVMRjUtL0&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=pHw42O6NYTYpKo-V4kUZ6w&oh=00_AYEVkIu_12kZ_ZP5ThZxbQL8OWTlhtsOfRzr78R0FlIEPw&oe=67E5B884
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/481297614_1065776345353334_6003369108131571610_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=P8FmdjleKSoQ7kNvgGSzu1z&_nc_oc=Adkgm3VlqZzaOTvwXfY2hNLzX3aqH
+ce8z6jiYOvp-TYkBIwqp_SvJIndfrXRY43uoHQitS6HDUUet82zqFj-P9w6&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=pHw42O6NYTYpKo-V4kUZ6w&oh=00_AYF5bx6Z3pKrBWzeguHKe6weRxgVvHAK7l2l717X-BW4eg&oe=67E5BA28
+        --> Page name: Naomi 
+        --> followers: 194K
+        --> following: 0
+ERROR:my_logger:'charmap' codec can't encode characters in position 31-34: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Naomi  with url https://www.facebook.com/naomiroestelhuynh successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/khanhvyofficial
+        --> Likes: 2,778,135
+        --> Talking about: 243,505
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/453222907_1010838550413842_6211143939307217198_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=SVJzcde63C4Q7kNvgGOoHzE&_nc_oc=Adkno_UGF9x7E3NqCbsBGmy9AyP
+qd4Eqa7Kwh6rB-OfQ-RK_YQptcxdBVKwpNAOvnjFwo17NGcOo5jx8uuNvHBCO&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=BqZ5h1xMgk0jbPTxQHxYJg&oh=00_AYHQ-rFoWmJfaaiObyghyVlmjC-J0RYWPL7ANRicw_8xyA&oe=67E59207
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t1.6435-9/184769662_311787246985646_2930617530607224362_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=jXiCEiDLhqYQ7kNvgEq4mVD&_nc_oc=AdlLCvznUzZ9B17mCgINiyrmQAKFOKBP
+JERvmxR2j1MtmMDfh1xHk8PAsqJmq3mq066GVdWVQXAcQOyzshvFKQAr&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=BqZ5h1xMgk0jbPTxQHxYJg&oh=00_AYEpU7QPqUez7L_z40GOySkEQ6JHET8HLRQzUZR_mULRPw&oe=68076250
+        --> Page name: Khánh Vy 
+        --> followers: 3.2M
+        --> following: 186
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea7' in position 33: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Khánh Vy  with url https://www.facebook.com/khanhvyofficial successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/thaytungielts
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/khiemslayss/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/officialjennyhuynh
+        --> Likes: 855,400
+        --> Talking about: 15,574
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/384765355_828157932649479_5987612311115807235_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=GC5-W534uFoQ7kNvgG0jQzy&_nc_oc=AdlEhGhSq1GWtSucxmp7V62SkLmRAPvt
+90sv9KfsT-upvnuowuN7tzgK8RSdQme-Br4lpVnF6cFK3RQi1kB_Ks7x&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=YiCKpSYstbUASN_o9RgHUA&oh=00_AYFX-hLUbiUfXplwRt6MUOE-TFU1n-SRk5Y_d92nRkLyzw&oe=67E5B22E
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/265201890_305878324877445_925791783023063722_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=KZo4MMV3CM0Q7kNvgErsuAr&_nc_oc=Adm-ecL4PBEIVyBL6vjIzNaIxLhRzWq
+uiZfqnX5JXRigFJoOR929qIo6VDauVstcCAwgTMoy0P12FpfcN_o0gWyQ&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=YiCKpSYstbUASN_o9RgHUA&oh=00_AYEJ2SphM5JrIfCA0Oacgrdhw9EIa3eoES7N93z-0dYQGA&oe=67E5A59F
+        --> Page name: Jenny Huynh 
+        --> followers: 2.5M
+        --> following: 1
+ERROR:my_logger:'charmap' codec can't encode character '\u1ee9' in position 48: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Jenny Huynh  with url https://www.facebook.com/officialjennyhuynh successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/withvung/
+        --> Likes: 68,185
+        --> Talking about: 13,515
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/456107701_469673539206887_7327294392949791447_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=1uDp42F3iVEQ7kNvgFenXJq&_nc_oc=AdmBMfTHZAPOc0HSB7QHUmK2lk
+mI0lCsqPoTTzNX_kQIxZv9XBv9otgi72_6tdFLeIGPoDkS4bd5qyaYdNVy1QGp&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=MQ4dzMFIm4SbmN4XnOygWA&oh=00_AYFmDbvLgiaNpYRbrSWtYIHBWt1wdqvwXRqLRCZgWmidpQ&oe=67E59C42
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/474857821_601473592693547_2779635622629081400_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Q-_eSt2Fj1IQ7kNvgGQOIWc&_nc_oc=Adm8y8N4PpmmLZSfEOUrF-bU0YYhBc
+P87gQzdWCQCkgjUw3uVfxbtuREff-hXVorzRWQPs586-4mEtFZrmR7ERX2&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=MQ4dzMFIm4SbmN4XnOygWA&oh=00_AYH-LQmRbNhGlUbtGGTVaYEeIqBMeqlieKHCQ7LutJmQAQ&oe=67E59C4B
+ERROR:my_logger:'charmap' codec can't encode character '\u1eeb' in position 24: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of V\u1eebng  with url https://www.facebook.com/withvung/ successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/nguyenlamthaotam2000
+        --> Likes: 21,404
+        --> Talking about: 1,243
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/442480250_432741862836070_2318559666820142223_n.jpg?stp=c0.0.652.652a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Fr_FDQfEuRYQ7kNvgHkXX81&_nc_oc=AdlI7w-N0CH4hmsL
+ctexyn69IyqZGmgZRx9Z9kUA4W1k69etJKmFOs1BdDzEFeUUXAV6-mYHwBLi8dVZE2_Zg-HP&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=QyzxeJLb6yh5DLUhLDzr2w&oh=00_AYENfhdJG97I6x0YeZxdu-RMC_2_tE01BDLqAH3XCZ8cUg&oe=67E5C034
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/484378637_635052639271657_53354286114733938_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=38SXUurMRGsQ7kNvgHZnd1i&_nc_oc=AdnL6rsonu05IMBkQoDpeZEx4JShusP7
+ukSFXhD4nA6SkkggSHpda6vbmMsnSUeUHMEVNvgXS9jC4MT5oLnwgYNq&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=QyzxeJLb6yh5DLUhLDzr2w&oh=00_AYHVCqZrzlUVMckQNUXrhXkqMDVpD3VOI-PgL_DtPWCK9w&oe=67E5BD2E
+        --> Page name: Nguyen Lam Thao Tam 
+        --> likes: 21K
+        --> followers: 40K
+ERROR:my_logger:'charmap' codec can't encode character '\u1ec5' in position 67: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Nguyen Lam Thao Tam  with url https://www.facebook.com/nguyenlamthaotam2000 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/meichannnnnnnn
+        --> Likes: 156,016
+        --> Talking about: 37,453
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/371980040_140878649078355_8917384467118187330_n.jpg?stp=c560.207.1154.1154a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=9GBpLx19ISsQ7kNvgGr8KWs&_nc_oc=AdnHkNYdtvwz
+6qUu4VxyfI-F0bG18zxEJ3S60SBpHW4fdnj7VcsZHskezDzQiPUG9QagQD17pPExdns3CXARXyz5&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=EqdY6e-4Fwlpiz7VlQO30g&oh=00_AYE10YiDZ5-8MsAGc_hdiw_g-DesWV-eWfFRna_lKCQVDQ&oe=67E5B9B9
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/470186527_436892649476952_8695207137617907147_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ikKosdnWllgQ7kNvgFXsqP9&_nc_oc=AdkvYQLvO6tErUlo4AZm3MtKeaKCob
+2MFpuK9DcsXb5k4KDRluCWK3PayxMW5GQtr-ZRSnYQvZDkNq7LniEXNBjG&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=EqdY6e-4Fwlpiz7VlQO30g&oh=00_AYF63XIB4i_JqnVGGsDzZoslghiW3QrpG14R7VZLHH3hRA&oe=67E5A202
+        --> Page name: Meichan 
+        --> followers: 199K
+        --> following: 10
+ERROR:my_logger:'charmap' codec can't encode character '\u0300' in position 33: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Meichan  with url https://www.facebook.com/meichannnnnnnn successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/hannaholala1
+        --> Likes: 926,035
+        --> Talking about: 84,611
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/312820270_6319806834702929_1141449086130815042_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=p3vUTPC0ZZkQ7kNvgH4zlEK&_nc_oc=AdmNppE1fZkGTzlYmsC8CWyNL-WlirJ
+Xs3q4usTphayAk8uU3l4_6BTcyWrRL1GOsqhgMuSjBsNjd9b55qE6WhY_&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=7E907dyiJcAtIa8265PUgA&oh=00_AYF_laECjOQAgXjBv0lRaOxT-0PlFXlkzToidqNOwBuWcA&oe=67E5A1EF
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/287075288_5911637585519858_5327326592589146672_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=TKH5pouI6lYQ7kNvgG5RO5g&_nc_oc=Adm_ELeTS_vomWelos1I8BQN61kym
+xTtmZ9a0fNhny_cezqUBEk8MjGjMogVUnAytffCUqBa3GzvNZV4EnazRcBj&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=7E907dyiJcAtIa8265PUgA&oh=00_AYHx28Js1HjwOZ1u_IyM948pRHzzDDlciXEdWMjlejPnvw&oe=67E58F7D
+        --> Page name: HannahOlala 
+        --> followers: 1.2M
+        --> following: 10
+ERROR:my_logger:'charmap' codec can't encode character '\u1edb' in position 60: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of HannahOlala  with url https://www.facebook.com/hannaholala1 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/bi.chan2
+WARNING:my_logger:Log in succesffuly
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s40x40&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeFRYe464l7oaBj93IKjoeH4Wt9TLzuBU1Ba31MvO4FTUN18I9FwU7fJ5yVwtb2Nm
+ZHLcwVGmUgdeZ4coAB9KfBC&_nc_ohc=1Lqf5wcWzhIQ7kNvgEFNjCQ&_nc_oc=AdlSUElxVvMcKV3AnLy8neoL6OhEmtbaG80xEU49btEKuOWlG8sfplJ6GJwdRy4QDYfkO1du_VXG0Z-trOoqoT8_&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=919NThP4wBZJrVb1joxTFA&oh=00_AYEa9h3
+WlvPab6-mO3B6KpEKyvuCj684X1XtmL3UmNLjdw&oe=6807593A
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/472121682_9171598589528905_880567296428405679_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHN1WFoxyJo_3ofh94WAxxD3QAr4191eTndACvjX3V5ObfbAqgmxhYP1HJ5
+Qt84IhaCsf7VYqTCBO71tq_4Spa3&_nc_ohc=CyywuGTD2JIQ7kNvgHG7eYL&_nc_oc=AdmytK47pFM8ccxHV4TSeLy3ECNBk9DYXtwzHCrTnPdwYEQ78jlg-K9pYMu-ViFtCouxn0DWjomZ2dPRZpnDYTKg&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=UNRVKBJleAHCP37PC10Yzg&oh=00_AY
+H8haqx9o_sN5gTE1apALTB869oXWQEiJXk2_MJ0XVLyw&oe=67E5BC16
+ERROR:my_logger:'charmap' codec can't encode character '\u0110' in position 28: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Luna \u0110ào  (SailorBi) with url https://www.facebook.com/bi.chan2 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/anphuong.letsplaymakeup/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/letsplaymakeupchannel/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/Nhi.Daphale?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/changmakeup?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/p/Trinh-Pham-100044592212208/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/chloe.nguyen.5832/
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/giangoivlog
+        --> Likes: 616,300
+        --> Talking about: 7,984
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/474465972_1147705356719243_6121937067944045344_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=wjF0GS6RvlsQ7kNvgEfp4Ox&_nc_oc=AdnEF-SAmT6bFYWyGDuIyzWptLUpM
+BQr_A5r5VI-GB5DDKKHOLmknBL96iZzKeHmo5boTgXkmdEqV5NKZAYlsynM&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=2FoSXodqUvF4wep_Uh2LBw&oh=00_AYFkvDYSL854Ygzv-vZWZAaL3-TUr9SVVig7zDLk1DEE_Q&oe=67E5A5D0
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/484462527_1182799929876452_1199944157990099074_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=T3XqrQo8RwYQ7kNvgEHMFZP&_nc_oc=Adm3glwJ29eSdcVRzvWViKGovQndu
+IDnamDWJKAg7EtuK-XKzphs07wA7Z9Ds1rS2vTnAy0j2iNRY7KfABcSEuTG&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=2FoSXodqUvF4wep_Uh2LBw&oh=00_AYFtsqsQTdFrwxy_1jmtpmx4DY3iE6CDmRVb978WY35-6g&oe=67E5BC26
+ERROR:my_logger:'charmap' codec can't encode character '\u01a0' in position 29: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Giang \u01a0i  with url https://www.facebook.com/giangoivlog successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/profile.php?id=100044467838108
+        --> Likes: 572,591
+        --> Talking about: 482,123
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/455363574_1034004988091753_254073345157916895_n.jpg?stp=c0.0.1536.1536a_dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=sy9qPHAql6MQ7kNvgG8AEGw&_nc_oc=Adnrorzbgyj9dK-N
+kX2rD6S0BqTq7V5ZVZmzcAhVIrmADhpT3r5OTBZhfwqFwdWtuPcjK6L3Pv6ke5JmOV3c6YmK&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=eigzyXinT7yMHMP4FpntlQ&oh=00_AYHQj9rfNyhVczCPc5xPnRW-_Y2Bkf3XW6EKziWC_wHE9w&oe=67E5C2C8
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/480327758_1159680582190859_6731135698420285104_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=jFnqbG6O5WEQ7kNvgHmBL9X&_nc_oc=Adkt3dObaxnVnuozFcPl5wODOJHS5a7IP6eoUwffV6LAEVP3ssyfa_
+48KY495gP7FYeBnVsYKpzVn_dhlG8pFhMF&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=eigzyXinT7yMHMP4FpntlQ&oh=00_AYFRUTslMM-sRXeEEpYvypoQLDoeZviF2W0wtPIXyRjb6w&oe=67E5AFB5
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea1' in position 29: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Tun Ph\u1ea1m  with url https://www.facebook.com/profile.php?id=100044467838108 successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/thachnguyenphuongtrang
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/sunhuynvlog
+        --> Likes: 305,137
+        --> Talking about: 17,256
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/475316409_1162373468582162_5209194070374059968_n.jpg?stp=c0.0.720.720a_dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=KyuGCySi5eQQ7kNvgGlb6oz&_nc_oc=Adk4phy4LjNU3jr
+uYS3ibhPRM3G9td3y8fuj_da_JqMwhxZVGcwFa88gnQ66lTGv6CeFq0Mfz50NPdmTIa3bZhtC&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=z1n3oQSQWxAoYBU4aqsVrw&oh=00_AYHJ4GvmQlXEKWTpXzjd_D1VuJJBQ3fWOcm6KUuuDf7HQA&oe=67E5A4C2
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/481093855_1182815596537949_3052201206330886073_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=mKrC_lZz_T4Q7kNvgHdVEVt&_nc_oc=AdkY-qELZKUSNNqDtSQwDZclEC_AS
+1Bs8PGyfi0zvOYVDT1IT6SVVYM4WOcW1Qq-066zKTVIey5qEYJcLJQ_GRIO&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=z1n3oQSQWxAoYBU4aqsVrw&oh=00_AYG49zyFnkoVagpSUEJTFlDO_luL-acnJHmKxZGQHWB1rw&oe=67E5C3B7
+        --> Page name: Sunhuyn 
+        --> followers: 427K
+        --> following: 0
+        --> Intro description: Content Creator - Entrepreneur
+INFO:my_logger:Scrape the page of Sunhuyn  with url https://www.facebook.com/sunhuynvlog successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/lieuhatrinhngoao/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/lehatruc.official?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/CaoThienTrang?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/nhidangtravelblog?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/KhoaiLangThang?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/hi.chanlaca?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/quycoctu?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/fahokaxedich?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/Phuongdidau/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/ninheating?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/nofoodphobia?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/@dinovu/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/mcwoossi?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/esheep.esheep?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/profile.php?id=61553016907936&locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/CiiNBuiThaoLy/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/hoaa.hanassi/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/VietPhuongThoa.PhuongThoa?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/Tra.Dang.990.NQD/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/@whynotchaoo/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/congthev?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/LongChun1994?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/duythamchannel
+        --> Likes: 253,988
+        --> Talking about: 112,213
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/292774230_107769745339961_164242967884606799_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=BHvvPCUgZa8Q7kNvgHIiUz4&_nc_oc=Adkv7LhN5uon52-xrJBa0KNTr-h31z4CT
+3NxKeTWFRVxvOKL9HDONyqvQ_w7AAqDA_f123QG1kSSmWThBtv-f-ME&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=ku2m1jdqiD9lcy1Ijh-1-A&oh=00_AYF-MRnUBEM9Ze6tHkaIf6Mj3YWBBaNBgDfoHXh4HJvGcg&oe=67E5B88B
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/440213914_400757946058418_1818319669914500001_n.png?stp=dst-png_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=eebjAw3AK_IQ7kNvgGGg6eZ&_nc_oc=Adn_V97XeB8Orx6ydRH91pM6HlyAC8RLH6
+EbgrQNbfU7VTnrB5OhkKUOu7JGUyRIsK4Ip7VP-eA2GOJpWkMTzZxg&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=ku2m1jdqiD9lcy1Ijh-1-A&oh=00_AYE88GEqLCrHb20TqMrseZyJupqkYqGnqWfW6ta-czRxsQ&oe=67E5AA5F
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea9' in position 29: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Duy Th\u1ea9m  with url https://www.facebook.com/duythamchannel successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/HongGam.Official
+        --> Likes: 607,136
+        --> Talking about: 1,238
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/454656888_1272620233867172_3690341540185856070_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=XCAA6NM85SEQ7kNvgFkfECC&_nc_oc=AdkCQpt67zMhmXot-Q9E-Rb9FU51o
+0jRuYPj-gG917o_DDWN80NDFkHi0QmdThiHQlLNu1GdOnpjFISLS_RE1I-l&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=4CamShHUoXi2SyjnsunxpQ&oh=00_AYHvwOHibVk9iwK8xqJcicgblqmtItFN2AkHVbQ0po1I4Q&oe=67E5BB95
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/455608728_1275701773559018_4699770941073713534_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=W20GVLmJQZAQ7kNvgHEH6Kg&_nc_oc=AdmXYZlXydlCWxaLioUCCsDvtkyuO
+EfapIzuQ28_8U3UIs8QWtbuiPve-mShtSUQnHvWA1wKtYGTjvyRQfVEUENC&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=4CamShHUoXi2SyjnsunxpQ&oh=00_AYFOZuh-rmLK41JrA7OOW2v5Y9iDXA4p9tFnr_ksbC6HDA&oe=67E5C17B
+ERROR:my_logger:'charmap' codec can't encode character '\u1ea5' in position 24: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of G\u1ea5m Kami  with url https://www.facebook.com/HongGam.Official successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/p/Xo%C3%A0i-Ph%E1%BA%ADm-61556678214058/
+        --> Likes: 26,305
+        --> Talking about: 85,324
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/448902316_122153324822222607_8153819050781435342_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=XZA8caRx03YQ7kNvgHn-1Nv&_nc_oc=AdmsHEIiM-H5784h6qhCSMV-WK-IE
+eP-y4iAjlNmUbBz9NvXnIEI9TmOzlvqntprlpqHEDrc5u2kxNJlutwntGs0&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=IEiuhG1mnT41SDwwnzbfvw&oh=00_AYE599gR8pC4LA_OsjlwFdhY3HODGI1iG0vggmcfgYSppA&oe=67E5BBBF
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/480360474_122218229162222607_7848901272579940552_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=08gEqj_WmTwQ7kNvgEH7ifX&_nc_oc=AdleFADm4t6Xl0Aoid6deSVsTDS
+VYRGOieidv9MQPEwXcZEuz59AYUVClIFj4sSYvZMtYEDzGLe1eW73MIaQI87N&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=IEiuhG1mnT41SDwwnzbfvw&oh=00_AYHp0_UsyCWLioBPF6S6ADV_vZUoZ1yb4psL9SL8cFwFKw&oe=67E5BE24
+ERROR:my_logger:'charmap' codec can't encode character '\u1ead' in position 30: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Xoài Ph\u1eadm  with url https://www.facebook.com/p/Xo%C3%A0i-Ph%E1%BA%ADm-61556678214058/ successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/VoThanhYOfficial/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/leboong95?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/diemmiiicindy/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/ngongochoa23092002/?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/jumpwhite7?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/haitrieu249?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/OfficialLinhNgocDam?locale=vi_VN
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/Lebao28/
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/linda.ngo.661160
+ERROR:my_logger:cannot access local variable 'likes_content' where it is not associated with a value
+ERROR:my_logger:'pageName'
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/dangthuhaf.official
+        --> Likes: 342,906
+        --> Talking about: 33,626
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/457257306_474963165508081_2171531861361918536_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=dsQT_Bc4JG8Q7kNvgG_bCoK&_nc_oc=AdlcAGuTdIbX62s1xtSYM2_3YJTS5Zyr
+9xhhZGuAuUsjVUqHJ1HjFIZnkLrdQlU7ZyR_wZmp9m-2NZWi3R5bsbuy&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=L_70_Dw_N6nqSBHPjcgHqw&oh=00_AYGXsDxCwj65HIHBimGxUqNAQA_fi2ny23rHxR2hwbs1fg&oe=67E5A52A
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/473445653_582010171470046_9011137115253603121_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ocDTxn5TZGMQ7kNvgE-0mAi&_nc_oc=Adlm7Wfkcwx1uyoKycHybUvg4n_yST
+NagZKFkd9hn2er-jAmclFNpmOezL6JFwnk1suBftobnf5JQhUs9XASGkJ5&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=L_70_Dw_N6nqSBHPjcgHqw&oh=00_AYEKQqUKYRc46nwhyqGuc53UfPiPdKthuz-76Cj3Yiu8dQ&oe=67E590CF
+ERROR:my_logger:'charmap' codec can't encode characters in position 23-24: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of \u0110\u1eb7ng Thu Hà  with url https://www.facebook.com/dangthuhaf.official successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/9.tinnguyen/
+        --> Likes: 392,281
+        --> Talking about: 96,372
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/480441051_616110584502207_2529574396101038348_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=QPgrVDVkTQYQ7kNvgGADWum&_nc_oc=AdnXbjg_a8_lJIKRGr5gV_27dSKdMO2R
+2s5ucd8s5J--aP5YTGh28sQAzoSttl5_3QDfHr0KXel8kw40_5RjlNUN&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=V1GQMJBTRZRIn2cni2icnA&oh=00_AYEl37VaetiWoy8wObSZw0Y16rFOj2JGXxngXh-OwDzG4A&oe=67E5912C
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/481982472_625585426888056_7909016616034737467_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=zhB_cSm8SKoQ7kNvgH0f8NC&_nc_oc=Adl98EUOhcYugD7RjIxypFjdFZJ-MG
+QYnxkni1MzFwIS46Of6kmiofwXboVOuHLYI5vvvknkltzE2eaY4g5ll8fr&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=V1GQMJBTRZRIn2cni2icnA&oh=00_AYGDO7WPrSu4_K542ENv3pRoDNBhOSKMQ3PUzI5OkfGSHg&oe=67E5B17D
+ERROR:my_logger:'charmap' codec can't encode character '\u1ec5' in position 31: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Tín Nguy\u1ec5n  with url https://www.facebook.com/9.tinnguyen/ successfully
+INFO:my_logger:Start scraping general informattion of url https://www.facebook.com/thunglongfamily
+        --> Likes: 269,464
+        --> Talking about: 28,164
+        --> Avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/474612696_1153493129481599_8476927292217363381_n.jpg?stp=c0.228.1365.1364a_dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=iiAbYetEStEQ7kNvgG_qAqw&_nc_oc=AdmXprTJCx9
+CtesgGGz8ku3RvP7B-brERE0ocisa1-HZO_g-UGOmO4R6DlBDFFMakYEy9EV3rLC8zflgVY13j4za&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=nZBhDjf3b1ssSDhi9hzj6g&oh=00_AYHfiqKQwN6raVaAABnfVWOFNgfmHeR0O8nhX8E1q6fI5Q&oe=67E59E53
+        --> Profile avatar URL: 
+https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/483103786_1185951026235809_6383679033173173523_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=EPQwipMArfwQ7kNvgHvW7Oi&_nc_oc=AdkjP9nGn_RjcjqQkKPZtmgc7ieX3
+3aiiUvcJzjrjkx-RQ4I4-ASN8ZwkgEOv7zQbId4tFkamM0dY9YBU0mhpMBe&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=nZBhDjf3b1ssSDhi9hzj6g&oh=00_AYFlQKMRPtZz1UM2rLoCKjafbB92z6Gd8J60XHANGPm_Uw&oe=67E5B85C
+ERROR:my_logger:'charmap' codec can't encode character '\u1ee7' in position 25: character maps to <undefined>
+*** You may need to add PYTHONIOENCODING=utf-8 to your environment ***
+INFO:my_logger:Scrape the page of Th\u1ee7ng Long Family  with url https://www.facebook.com/thunglongfamily successfully
+ERROR:my_logger:no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id="loginform"]"}
+  (Session info: chrome=126.0.6478.127); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+WARNING:my_logger:Log in succesffuly
+INFO:my_logger:Start scrape about tab of page M-TP 
+        --> Number of about elements: 4
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Musician/band
+                        --> Contact info
+                                --> mobile: 085 757 5707
+                                --> email: partners@mtpentertainment.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: http://www.mtpentertainment.com/
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: page transparency
+                        --> Page ID: 309972372349806
+                        --> Creation date: 2 November 2011
+                --> Title: details about m-tp
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/MTP.Fan/about_details successfully
+INFO:my_logger:Start scrape about tab of page \u0110en Vâu 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: denvau.booking@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: http://denvau.vn/
+                --> Title: page transparency
+                        --> Page ID: 334790356708291
+                        --> Creation date: 9 January 2015
+INFO:my_logger:Start scrape about tab of page HIEUTHUHAI 
+(Tr\u1ea7n Minh Hi\u1ebfu)
+        --> Number of about elements: 5
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: hieuthuhai@nomadmgmt.vn
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 3
+                                        --> instagram: hieuthuhai
+                                        --> tiktok: hieuthuhai2222
+                                        --> youtube: hieuthuhaiofficial
+                        --> Basic info
+                                --> Reviews: 100% recommend (487 reviews)
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: work and education
+                --> Title: page transparency
+                        --> Page ID: 650472165018104
+                        --> Creation date: 25 March 2014
+                --> Title: details about hieuthuhai
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/HIEUTHUHAIOFFICIAL/about_details successfully
+INFO:my_logger:Start scrape about tab of page Chi Pu 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Actor
+                        --> Contact info
+                                --> mobile: 094 419 43 77
+                                --> email: chipu@the1st.vn
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://ChiPu.bfan.link/followme
+                                --> Social: 6
+                                        --> tiktok: chipupu
+                --> Title: page transparency
+                        --> Page ID: 1435066040049835
+                        --> Creation date: 14 November 2013
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/chipupu93/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Mono 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Singer
+                        --> Contact info
+                                --> mobile: 093 408 68 87
+                                --> email: ca@monoteam.vn
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: page transparency
+                        --> Page ID: 105477068781039
+                        --> Creation date: 24 March 2022
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/mono.hng/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Chau Bui 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: katng.team@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://chaubui.net/
+                                --> Social: 1
+                                        --> youtube: https://www.youtube.com/c/ChauBuiOfficial
+                --> Title: page transparency
+                        --> Page ID: 796192283814580
+                        --> Creation date: 29 June 2016
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/chaubui.official/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Ninh D\u01b0\u01a1ng Lan Ng\u1ecdc 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Actor
+                        --> Contact info
+                                --> email: ninhduonglanngoc.official@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: http://bit.ly/NinhDuongLanNgocOfficial
+                                --> Social: 2
+                --> Title: places lived
+                --> Title: page transparency
+                        --> Page ID: 663887350294058
+                        --> Creation date: 29 May 2013
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/fromninhduonglanngoc/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Tr\u1ea5n Thành 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: tranthanhtown.official@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.youtube.com/TRANTHANHTOWN
+                                --> Social: 2
+                                        --> instagram: tuilatranthanhday
+                                        --> youtube: https://www.youtube.com/TRANTHANHTOWN
+                --> Title: page transparency
+                        --> Page ID: 488035214559138
+                        --> Creation date: 4 August 2012
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/tran.thanh.ne/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Tóc Tiên 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://timesrecords.lnk.to/TocTien-CONG
+                --> Title: page transparency
+                        --> Page ID: 196442413719147
+                        --> Creation date: 19 February 2011
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/TocTienOfficial/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Binz Da Poet 
+        --> Number of about elements: 0
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/officialbinz/supporters/?entrypoint_surface=supporter_hub_tab_on_profile_plus_surface&surface=supporter_hub_tab_on_profile_plus_surface successfully
+INFO:my_logger:Start scrape about tab of page \u0110ông Nhi 
+        --> Number of about elements: 7
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: booking@6se.vn
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.instagram.com/singerdongnhi/
+                                --> Social: 4
+                                        --> instagram: singerdongnhi
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                                --> impressum: 6th Sense Entertainment JSC
+                --> Title: work and education
+                --> Title: page transparency
+                        --> Page ID: 249295085540
+                        --> Creation date: 9 September 2009
+                --> Title: family and relationships
+INFO:my_logger:Start scrape about tab of page Noo Ph\u01b0\u1edbc Th\u1ecbnh 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Interest
+                        --> Contact info
+                                --> mobile: 865690388
+                                --> email: entertainmentnoo@gmail.com
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: page transparency
+                        --> Page ID: 171751199674
+                        --> Creation date: 11 November 2009
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/phuocthinh.noo/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page BB Tr\u1ea7n 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> mobile: 091 718 22 12
+                                --> email: booking@teetalents.vn
+                --> Title: page transparency
+                        --> Page ID: 375499159164608
+                        --> Creation date: 18 May 2012
+INFO:my_logger:Start scrape about tab of page Hoa H\u1eadu H\u01b0\u01a1ng Giang 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Contact info
+                                --> address: Ho Chi Minh City, Vietnam
+                                --> mobile: 098 540 87 59
+                                --> email: huonggiangentertainment@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: http://www.facebook.com/jennifer.singer.395?ref=ts
+                --> Title: page transparency
+                        --> Page ID: 135455673266641
+                        --> Creation date: 7 September 2012
+INFO:my_logger:Start scrape about tab of page MCK 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: mckblowsurmind@gmail.com
+                        --> Websites and social links
+                                --> Websites: 5
+                                        --> website: https://wechoice.vn/chi-tiet-de-cu/12/anh-da-on-hon-mck-115.htm
+                                        --> website: https://wechoice.vn/chi-tiet-de-cu/1/rapper-mck-206.htm
+                                        --> website: https://wechoice.vn/chi-tiet-de-cu/2/mck-10.htm
+                                        --> website: https://wechoice.vn/chi-tiet-de-cu/4/99-mck-96.htm
+                                        --> website: https://wechoice.vn/chi-tiet-de-cu/6/buon-hay-vui-vsoul-x-mck-x-obito-x-ronboogz-x-boyzed-192.htm
+                        --> Basic info
+                                --> Reviews: 90% recommend (58 reviews)
+                --> Title: page transparency
+                        --> Page ID: 105255080890120
+                        --> Creation date: 11 October 2019
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/hoanglongmck/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Phí Ph\u01b0\u01a1ng Anh 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.facebook.com/phi.p.anh
+                --> Title: page transparency
+                        --> Page ID: 315270232189482
+                        --> Creation date: 14 November 2016
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/PhiPhuongAnh.vn/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Tr\u01b0\u1eddng Giang 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: quangvuatz@gmail.com
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 2
+                                        --> youtube: TruongGiangPOPS
+                                        --> instagram: vovutruonggiang204
+                --> Title: page transparency
+                        --> Page ID: 123588824478563
+                        --> Creation date: 6 September 2013
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/TruongGiangDanhHai/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page H'Hen Niê 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Health/beauty
+                        --> Contact info
+                                --> mobile: 090 805 87 82
+                                --> email: contact@hhennie.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.instagram.com/hhennie.official/
+                        --> Basic info
+                                --> Reviews: 98% recommend (782 reviews)
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: page transparency
+                        --> Page ID: 171891086745399
+                        --> Creation date: 7 January 2018
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/HHennieOfficial/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Tu\u1ea5n Tr\u1ea7n 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: dohoangvu@kimentertainment.com.vn
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 1
+                                        --> youtube: https://www.youtube.com/channel/UCE5_ajsZzs_gLLfsrrQzgNg
+                        --> Basic info
+                                --> Reviews: 100% recommend (218 reviews)
+                --> Title: page transparency
+                        --> Page ID: 274848553034548
+                        --> Creation date: 8 October 2017
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/DvTuanTran/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Salim 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> mobile: 097 966 09 88
+                                --> email: hatnhaifamily@theantsmedia.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: http://Linktr.ee/hatnhaifamily
+                --> Title: page transparency
+                        --> Page ID: 106646919749989
+                        --> Creation date: 6 May 2016
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/salim21.official/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Jun Ph\u1ea1m 
+        --> Number of about elements: 4
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Actor
+                        --> Contact info
+                                --> address: Ho Chi Minh City, Vietnam
+                                --> email: junphamteam@gmail.com
+                        --> Basic info
+                                --> Reviews: 100% recommend (310 reviews)
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                                --> impressum: CONTACT FOR WORK 
+junphamteam@gmail.com
+                --> Title: page transparency
+                        --> Page ID: 1508679309362025
+                        --> Creation date: 20 July 2014
+INFO:my_logger:Start scrape about tab of page Lê Hu\u1ef3nh Thuý Ngân 
+        --> Number of about elements: 4
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: lehuynhthuyngan.booking@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.youtube.com/channel/UCRdZ-5696WDTEuGPX1kH8Fg
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: page transparency
+                        --> Page ID: 146041832603717
+                        --> Creation date: 11 May 2017
+INFO:my_logger:Start scrape about tab of page NG\u1eccC TRINH 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Fashion model
+                        --> Contact info
+                                --> address: Ho Chi Minh City, Vietnam
+                                --> email: minhphuongnguyen1903@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://lyb.vn/
+                                --> Social: 1
+                                        --> instagram: ngoctrinh89
+                --> Title: page transparency
+                        --> Page ID: 534945013187112
+                        --> Creation date: 23 October 2012
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/page.ngoctrinh/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Anh Tú Atus 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> mobile: 098 151 15 08
+                                --> email: anhtuatus.official@gmail.com
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 3
+                                        --> youtube: anhtuatus8279
+                                        --> instagram: atus310
+                                        --> tiktok: atusmain
+                        --> Basic info
+                                --> Reviews: 100% recommend (37 reviews)
+                --> Title: page transparency
+                        --> Page ID: 290184777788700
+                        --> Creation date: 24 August 2013
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/buianhtu.atus/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Tr\u01b0\u01a1ng Th\u1ebf Vinh 
+        --> Number of about elements: 0
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/TruongTheVinh.Official/supporters/?entrypoint_surface=supporter_hub_tab_on_profile_plus_surface&surface=supporter_hub_tab_on_profile_plus_surface successfully
+INFO:my_logger:Start scrape about tab of page Linh Ka 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Art
+                        --> Contact info
+                                --> email: cmo1990vn@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.facebook.com/groups/233962076240238/?ref=share_group_link
+                        --> Basic info
+                                --> Reviews: 94% recommend (23 reviews)
+                --> Title: page transparency
+                        --> Page ID: 107226934636082
+                        --> Creation date: 29 December 2020
+                --> Title: details about linh ka
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/linhka2020/about_details successfully
+INFO:my_logger:Start scrape about tab of page Naomi 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Artist
+                        --> Contact info
+                                --> email: naomiroestelhuynh@gmail.com
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 1
+                                        --> instagram: naomiroestel
+                --> Title: page transparency
+                        --> Page ID: 109412370444722
+                        --> Creation date: 10 September 2019
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/naomiroestelhuynh/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Khánh Vy 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Contact info
+                                --> email: contact.khanhvy@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.instagram.com/khanhvyccf/?hl=en
+                                --> Social: 1
+                                        --> youtube: https://www.youtube.com/c/KhánhVyOFFICIAL
+                        --> Basic info
+                                --> Reviews: 100% recommend (7 reviews)
+                --> Title: page transparency
+                        --> Page ID: 202746753521009
+                        --> Creation date: 30 December 2016
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/khanhvyofficial/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Jenny Huynh 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Contact info
+                                --> email: jennyslimey.vn@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://m.youtube.com/channel/UChpH1_IoKdakdZbynWXiHuw
+                --> Title: page transparency
+                        --> Page ID: 110941390709919
+                        --> Creation date: 28 July 2020
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/officialjennyhuynh/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page V\u1eebng 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Digital creator
+                        --> Contact info
+                                --> email: teamvung@uni-com.vn
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://linktr.ee/withvung
+                                --> Social: 3
+                                        --> instagram: withvung
+                                        --> tiktok: withvung
+                --> Title: page transparency
+                        --> Page ID: 102948212550221
+                        --> Creation date: 25 August 2022
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/withvung/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Nguyen Lam Thao Tam 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Actor
+                        --> Contact info
+                                --> address: Ho Chi Minh City, Vietnam
+                                --> email: tamnltcontact@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://instagram.com/mia.soya?igshid=YmMyMTA2M2Y%3D
+                        --> Basic info
+                                --> Reviews: Not yet rated (0 reviews)
+                                --> expressive pronouns: she/her
+                --> Title: page transparency
+                        --> Page ID: 105698495439275
+                        --> Creation date: 2 April 2022
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/nguyenlamthaotam2000/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Meichan 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Digital creator
+                        --> Contact info
+                                --> address: 
+                                --> email: teammeichan@uni-com.vn
+                        --> Basic info
+                                --> Reviews: Not yet rated (3 reviews)
+                --> Title: page transparency
+                        --> Page ID: 115764994921968
+                        --> Creation date: 23 July 2023
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/meichannnnnnnn/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page HannahOlala 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Personal blog
+                        --> Contact info
+                                --> email: hannaholala@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://hannaholala.com/
+                --> Title: page transparency
+                        --> Page ID: 1298967510120245
+                        --> Creation date: 20 April 2016
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/hannaholala1/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Luna \u0110ào  (SailorBi)
+        --> Number of about elements: 8
+                --> Title: overview
+                --> Title: work and education
+                --> Title: places lived
+                --> Title: contact and basic info
+                        --> Contact info
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: family and relationships
+                --> Title: details about luna
+                --> Title: life events
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/bi.chan2/about_life_events successfully
+INFO:my_logger:Start scrape about tab of page Giang \u01a0i 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Contact info
+                                --> service area: Ho Chi Minh City
+                                --> email: tan@giangoi.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.youtube.com/c/Giang%C6%A0i
+                                --> Social: 3
+                                        --> instagram: giangoivlog
+                --> Title: page transparency
+                        --> Page ID: 1133098380074151
+                        --> Creation date: 21 May 2016
+INFO:my_logger:Start scrape about tab of page Tun Ph\u1ea1m 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Contact info
+                                --> email: phamduchuy181197@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://beacons.ai/tunpham
+                        --> Basic info
+                                --> price: Price range · ££££
+                --> Title: page transparency
+                        --> Page ID: 302563383516416
+                        --> Creation date: 31 May 2017
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/profile.php?id=100044467838108&sk=about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Sunhuyn 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Blogger
+                        --> Contact info
+                                --> email: contact@sunhuyn.vn
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 1
+                                        --> instagram: sunhuyn
+                        --> Basic info
+                                --> Reviews: 100% recommend (66 reviews)
+                --> Title: page transparency
+                        --> Page ID: 425880814442057
+                        --> Creation date: 8 May 2017
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/sunhuynvlog/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Duy Th\u1ea9m 
+        --> Number of about elements: 4
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Digital creator
+                        --> Contact info
+                                --> address: Hanoi, Vietnam
+                                --> email: ngoducduy.1511@gmail.com
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                --> Title: page transparency
+                        --> Page ID: 107766425340293
+                        --> Creation date: 15 July 2022
+INFO:my_logger:Start scrape about tab of page G\u1ea5m Kami 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Public figure
+                        --> Contact info
+                                --> mobile: 098 842 88 15
+                                --> email: booking@box.studio
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 4
+                                        --> youtube: GamKami
+                                        --> tiktok: gamkami
+                                        --> instagram: iamam.00
+                --> Title: privacy and legal info
+                        --> Privacy and legal info
+                                --> impressum: © Copyright by Box Studio. Contact: copyright@box.studio
+                --> Title: page transparency
+                        --> Page ID: 105822457606791
+                        --> Creation date: 31 December 2019
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/HongGam.Official/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Xoài Ph\u1eadm 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Digital creator
+                        --> Contact info
+                                --> email: xoaipham@ctypopo.com
+                        --> Websites and social links
+ERROR:my_logger:cannot access local variable 'website_part' where it is not associated with a value
+                                --> Social: 2
+                                        --> youtube: https://www.youtube.com/@xoaiphm
+                                        --> tiktok: https://www.tiktok.com/@xoai.phm
+                --> Title: page transparency
+                        --> Page ID: 247262915132881
+                        --> Creation date: 16 February 2024
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/profile.php?id=61556678214058&sk=about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page \u0110\u1eb7ng Thu Hà 
+        --> Number of about elements: 3
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Digital creator
+                        --> Contact info
+                                --> email: partners@schannel.vn
+                        --> Basic info
+                                --> Reviews: 96% recommend (21 reviews)
+                --> Title: page transparency
+                        --> Page ID: 100375646311276
+                        --> Creation date: 1 February 2023
+INFO:my_logger:Start scrape about tab of page Tín Nguy\u1ec5n 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Actor
+                        --> Basic info
+                                --> Reviews: Not yet rated (2 reviews)
+                                --> price: Price range · £££
+                --> Title: page transparency
+                        --> Page ID: 109432751690059
+                        --> Creation date: 6 March 2022
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/9.tinnguyen/about_profile_transparency successfully
+INFO:my_logger:Start scrape about tab of page Th\u1ee7ng Long Family 
+        --> Number of about elements: 2
+                --> Title: contact and basic info
+                        --> Categories
+                                --> Digital creator
+                        --> Contact info
+                                --> mobile: 877034594
+                                --> email: nguyenthuy.tlf@gmail.com
+                        --> Websites and social links
+                                --> Websites: 1
+                                        --> website: https://www.tiktok.com/@thunglongfamily
+                        --> Basic info
+                                --> Reviews: Not yet rated (2 reviews)
+                --> Title: page transparency
+                        --> Page ID: 1840183122924176
+                        --> Creation date: 19 January 2017
+INFO:my_logger:Scrape the about tab of url https://www.facebook.com/thunglongfamily/about_profile_transparency successfully
