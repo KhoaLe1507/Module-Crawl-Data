@@ -6,7 +6,7 @@ from log import Log
 
 def get_lines(filepath: str) -> List[str]:
     with open(filepath, "r", encoding="utf-8") as f:
-        urls = [line.strip() for line in f.readlines()]
+        urls = [line.strip() for line in f.readlines() if line.strip()]
 
     return urls
 
@@ -50,14 +50,6 @@ class ScrapeResult(object):
         return result
 
 
-def export_json(data: List[ScrapeResult], filepath: str) -> None:
-    d = [obj.to_dict() for obj in data]
-    dirpath = os.path.dirname(os.path.abspath(filepath))
-    os.makedirs(dirpath, exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(d, f, indent=4, ensure_ascii=False)
-
-
 class WebScraper(object):
     def __init__(self, config: Config) -> None:
         Log.init(config.logging_file)
@@ -69,6 +61,19 @@ class WebScraper(object):
 
     def close(self) -> None:
         Log.close()
+
+    def export(self, filepath: str) -> None:
+        if len(self.result) == 0:
+            return
+
+        d = self.result
+        if isinstance(self.result[0], ScrapeResult):
+            d = [obj.to_dict() for obj in self.result]
+
+        dirpath = os.path.dirname(os.path.abspath(filepath))
+        os.makedirs(dirpath, exist_ok=True)
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(d, f, indent=4, ensure_ascii=False)
 
 
 # EOF

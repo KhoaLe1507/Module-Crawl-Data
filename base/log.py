@@ -1,5 +1,6 @@
 import logging
 import os
+from colorama import Fore, Style
 
 
 class Log:
@@ -19,11 +20,21 @@ class Log:
 
     @classmethod
     def info(cls, *args) -> None:
+        print(Fore.CYAN)
         logging.info(args)
+        print(Style.RESET_ALL)
 
     @classmethod
     def error(cls, *args) -> None:
+        print(Fore.RED)
         logging.error(args)
+        print(Style.RESET_ALL)
+
+    @classmethod
+    def warn(cls, *args) -> None:
+        print(Fore.YELLOW)
+        logging.warning(args)
+        print(Style.RESET_ALL)
 
     @classmethod
     def close(cls) -> None:

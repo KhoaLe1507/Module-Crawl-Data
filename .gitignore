@@ -1,3 +1,5 @@
 /secret.json
 /base/youtube_result.json
 /base/facebook_result.json
+__pycache__/
+/base/ins_result.json

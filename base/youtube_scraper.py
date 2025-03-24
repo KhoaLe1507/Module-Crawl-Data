@@ -1,107 +1,15 @@
 from typing import List, override
 import requests
-import urllib.parse
-import regex
 
-from web_scraper import Config, ScrapeResult, WebScraper
+from web_scraper import WebScraper
+from youtube_config import (
+    YoutubeConfig,
+    YoutubeChannel,
+    YoutubeVideo,
+    YoutubeVideoComment,
+)
 from log import Log
-
-
-def extract_channel_id(url):
-    url = str(url).strip()
-    if "/channel/" in url:
-        return url.split("/channel/")[-1].split("/")[0]
-    elif "@" in url or "/c/" in url:
-        return get_channel_id_from_custom_url(url)
-    return None
-
-
-def get_channel_id_from_custom_url(url):
-    decoded_url = urllib.parse.unquote(url).strip()
-    if not decoded_url.startswith("http"):
-        decoded_url = "https://" + decoded_url
-
-    try:
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-        response = requests.get(decoded_url, headers=headers, timeout=10)
-        html = response.text
-
-        match = regex.search(r'"channelId":"(UC[\w-]{22})"', html)
-        if match:
-            return match.group(1)
-
-        match_alt = regex.search(r"channel/UC[\w-]{22}", html)
-        if match_alt:
-            return match_alt.group(0).split("/")[-1]
-
-        Log.info(f"Không tìm thấy channelId trong HTML từ {decoded_url}")
-        return None
-
-    except Exception as e:
-        Log.error(f"Lỗi khi truy cập {decoded_url}: {e}")
-        return None
-
-
-class YoutubeConfig(Config):
-    def __init__(self) -> None:
-        super().__init__()
-        self.api_keys: List[str] = []
-
-
-class YoutubeVideoComment(ScrapeResult):
-    def __init__(self) -> None:
-        self.channel_title: str | None = None
-        self.video_id: int | None = None
-        self.author: str | None = None
-        self.text: str | None = None
-        self.likeCount: int | None = None
-        self.publishedAt: str | None = None
-        super().__init__()
-
-
-class YoutubeVideo(ScrapeResult):
-    def __init__(self) -> None:
-        self.video_id: str | None = None
-        self.channel_title: str | None = None
-        self.title: str | None = None
-        self.publishedAt: str | None = None
-        self.description: str | None = None
-        self.tags: str | None = None
-        self.duration: str | None = None
-        self.definition: str | None = None
-        self.viewCount: str | None = None
-        self.likeCount: str | None = None
-        self.commentCount: str | None = None
-        self.privacyStatus: str | None = None
-        self.embedHtml: str | None = None
-        self.topics: list[str] | None = None
-        self.liveViewers: str | None = None
-        self.location: str | None = None
-        self.madeForKids: bool | None = None
-        super().__init__()
-
-
-class YoutubeChannel(ScrapeResult):
-    def __init__(self) -> None:
-        self.channel_id: str | None = None
-        self.channel_title: str | None = None
-        self.description: str | None = None
-        self.publishedAt: str | None = None
-        self.customUrl: str | None = None
-        self.country: str | None = None
-        self.viewCount: str | None = None
-        self.subscriberCount: str | None = None
-        self.videoCount: str | None = None
-        self.bannerUrl: str | None = None
-        self.keywords: str | None = None
-        self.topics: list[str] | None = None
-        self.localizations: list[str] | None = None
-        self.defaultLanguage: str | None = None
-        self.featuredChannels: list[str] | None = None
-        self.moderateComments: bool | None = None
-        self.showRelatedChannels: bool | None = None
-        self.uploads_playlist_id: str | None = None
-        super().__init__()
+from youtube_utils import extract_channel_id
 
 
 class YoutubeScraper(WebScraper):
@@ -153,7 +61,7 @@ class YoutubeScraper(WebScraper):
 
             self.result.append(channel_info)
 
-    def get_channel_info(self, channel_id):
+    def get_channel_info(self, channel_id) -> YoutubeChannel | None:
         api_key = self.get_api_key()
         url = f"https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics,brandingSettings,contentDetails,topicDetails,localizations&id={channel_id}&key={api_key}"
 
@@ -197,7 +105,7 @@ class YoutubeScraper(WebScraper):
         channel.uploads_playlist_id = uploads_playlist_id
         return channel
 
-    def get_latest_video_ids(self, playlist_id, max_results=10):
+    def get_latest_video_ids(self, playlist_id, max_results=10) -> List:
         api_key = self.get_api_key()
         url = f"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={playlist_id}&maxResults={max_results}&key={api_key}"
         res = self.safe_request(url)

@@ -1,5 +1,5 @@
 from facebook_scraper import FacebookScraper, FacebookConfig
-from web_scraper import get_lines, export_json
+from web_scraper import get_lines
 import json
 
 if __name__ == "__main__":
@@ -18,7 +18,7 @@ if __name__ == "__main__":
         scraper = FacebookScraper(config)
         urls = get_lines("base/facebook_urls.txt")
         scraper.run(urls)
-        export_json(scraper.result, "base/facebook_result.json")
+        scraper.export("base/facebook_result.json")
         print("Scraper finished successfully.")
     finally:
         if scraper:

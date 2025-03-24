@@ -165,13 +165,13 @@ class FacebookScraper(WebScraper):
                 soup = BeautifulSoup(html, "html.parser")
 
                 avt_element = soup.find("image")
-                if avt_element is Tag:
+                if isinstance(avt_element, Tag):
                     kol.avatarUrl = avt_element.attrs["xlink:href"]  # Avatar link
 
                 poster_element = soup.find(
                     "img", {"data-imgperflogname": "profileCoverPhoto"}
                 )
-                if poster_element is Tag:
+                if isinstance(poster_element, Tag):
                     kol.profileAvatarUrl = poster_element.attrs[
                         "src"
                     ]  # Poster avatar link
