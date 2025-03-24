@@ -2,9 +2,9 @@ from typing import List, override
 import requests
 import urllib.parse
 import regex
-import logging
 
 from web_scraper import Config, ScrapeResult, WebScraper
+from log import Log
 
 
 def extract_channel_id(url):
@@ -34,11 +34,11 @@ def get_channel_id_from_custom_url(url):
         if match_alt:
             return match_alt.group(0).split("/")[-1]
 
-        logging.info(f"Không tìm thấy channelId trong HTML từ {decoded_url}")
+        Log.info(f"Không tìm thấy channelId trong HTML từ {decoded_url}")
         return None
 
     except Exception as e:
-        logging.error(f"Lỗi khi truy cập {decoded_url}: {e}")
+        Log.error(f"Lỗi khi truy cập {decoded_url}: {e}")
         return None
 
 
@@ -117,7 +117,7 @@ class YoutubeScraper(WebScraper):
         self.current_key_index = (self.current_key_index + 1) % len(
             self.config.api_keys
         )
-        logging.info(f" Đang chuyển sang API Key thứ {self.current_key_index + 1}")
+        Log.info(f" Đang chuyển sang API Key thứ {self.current_key_index + 1}")
 
     def safe_request(self, url):
         for _ in range(len(self.config.api_keys)):
@@ -125,30 +125,30 @@ class YoutubeScraper(WebScraper):
             data = response.json()
             if "error" in data:
                 if data["error"].get("code") == 403:
-                    logging.info("Hết quota cho API Key hiện tại. Thử key tiếp theo...")
+                    Log.info("Hết quota cho API Key hiện tại. Thử key tiếp theo...")
                     self.rotate_api_key()
                     key = self.get_api_key()
                     url = url.split("key=")[0] + f"key={key}"
                     continue
                 else:
-                    logging.error("Lỗi khác từ API:", data["error"].get("message"))
+                    Log.error("Lỗi khác từ API:", data["error"].get("message"))
                     return
             return data
-        logging.info("Đã thử hết API Keys nhưng vẫn lỗi.Đợi lúc 14h để được reset")
+        Log.info("Đã thử hết API Keys nhưng vẫn lỗi.Đợi lúc 14h để được reset")
         return None
 
     @override
     def run(self, urls: list[str]) -> None:
         for url in urls:
-            logging.info(f"Đang xử lý: {url}")
+            Log.info(f"Đang xử lý: {url}")
             channel_id = extract_channel_id(url)
             if not channel_id:
-                logging.info(f" Không tìm được channel ID từ {url}")
+                Log.info(f" Không tìm được channel ID từ {url}")
                 continue
 
             channel_info = self.get_channel_info(channel_id)
             if not channel_info:
-                logging.info(f" Không lấy được thông tin cho kênh {channel_id}")
+                Log.info(f" Không lấy được thông tin cho kênh {channel_id}")
                 continue
 
             self.result.append(channel_info)
@@ -202,7 +202,7 @@ class YoutubeScraper(WebScraper):
         url = f"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={playlist_id}&maxResults={max_results}&key={api_key}"
         res = self.safe_request(url)
         if not res or "items" not in res:
-            logging.info(f"Không lấy được video từ playlist {playlist_id}")
+            Log.info(f"Không lấy được video từ playlist {playlist_id}")
             return []
         return [item["snippet"]["resourceId"]["videoId"] for item in res["items"]]
 

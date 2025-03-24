@@ -1,7 +1,7 @@
 import os
 import json
 from typing import List, Dict, Any
-import logging
+from log import Log
 
 
 def get_lines(filepath: str) -> List[str]:
@@ -14,6 +14,12 @@ def get_lines(filepath: str) -> List[str]:
 class Config:
     def __init__(self) -> None:
         self.logging_file: str | None = None
+
+    def check(self) -> None:
+        """
+        Check if the configuration is valid
+        """
+        pass
 
 
 class ScrapeResult(object):
@@ -54,13 +60,7 @@ def export_json(data: List[ScrapeResult], filepath: str) -> None:
 
 class WebScraper(object):
     def __init__(self, config: Config) -> None:
-        if config.logging_file:
-            logging.basicConfig(
-                filename=config.logging_file,
-                level=logging.INFO,
-            )
-        else:
-            logging.basicConfig(level=logging.INFO)
+        Log.init(config.logging_file)
         self.config = config
         self.result: List = []
 
@@ -68,7 +68,7 @@ class WebScraper(object):
         _ = urls
 
     def close(self) -> None:
-        pass
+        Log.close()
 
 
 # EOF
