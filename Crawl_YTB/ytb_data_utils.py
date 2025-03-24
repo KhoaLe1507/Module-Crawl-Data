@@ -59,14 +59,15 @@ def get_channel_info(channel_id):
         "subscriberCount": data["statistics"].get("subscriberCount", "hidden"),
         "videoCount": data["statistics"].get("videoCount"),
         "bannerUrl": data["brandingSettings"].get("image", {}).get("bannerExternalUrl", ""),
-        "keywords": data["brandingSettings"]["channel"].get("keywords", ""), #Config by user
-        "topics": data.get("topicDetails", {}).get("topicCategories", []),  #Config by YTB system
-        "localizations": list(data.get("localizations", {}).keys()),
-        "defaultLanguage": data["brandingSettings"]["channel"].get("defaultLanguage", ""),
-        "featuredChannels": data["brandingSettings"]["channel"].get("featuredChannelsUrls", []),
+        "highThumbnail/Avatar": data["snippet"].get("thumbnails", {}).get("high", {}).get("url", ""),
+        "keywords": data["brandingSettings"]["channel"].get("keywords", ""),
+        "topics": [url.split("/")[-1] for url in data.get("topicDetails", {}).get("topicCategories", [])],
+        "communityGuidelinesGoodStanding": data.get("auditDetails", {}).get("communityGuidelinesGoodStanding", False), # Kênh có vi phạm chính sách cộng đồng không
+        "contentIdClaimsGoodStanding": data.get("auditDetails", {}).get("contentIdClaimsGoodStanding", False), # Trạng thái yêu cầu bản quyền nội dung
+        "copyrightStrikesGoodStanding": data.get("auditDetails", {}).get("copyrightStrikesGoodStanding", False), # Trạng thái bản quyền có vi phạm không
         "moderateComments": data["brandingSettings"]["channel"].get("moderateComments", False),
         "showRelatedChannels": data["brandingSettings"]["channel"].get("showRelatedChannels", True),
-        "uploads_playlist_id": uploads_playlist_id
+        "moderationStatus": data.get("brandingSettings", {}).get("channel", {}).get("moderateComments", False)
     }
 
 def get_latest_video_ids(playlist_id, max_results=10):
