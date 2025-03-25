@@ -7,31 +7,7 @@ from bs4 import BeautifulSoup
 import json
 import time
 
-starttime = time.time()
-
-# Read links from file
-with open("links.txt", "r", encoding="utf-8") as file:
-    links = [line.strip() for line in file.readlines()]
-
-# Configure Chrome options
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-chrome_options.add_experimental_option("useAutomationExtension", False)
-chrome_options.add_argument(
-    "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-
-data_file_name = "profile_data.json"
-datas = []
-
-# Initialize WebDriver once
-driver = webdriver.Chrome(options=chrome_options)
-
-
-def get_information(url):
+def get_information(url, datas ,driver):
     try:
         driver.get(url)
 
@@ -62,7 +38,7 @@ def get_information(url):
                 #     }
                 #     videos.append(video)
                 # user_info["videos"] = videos
-                # print(user_info['user']['nickname'])
+                print(f"Success: {url}")
                 datas.append(user_info)
                 return
         print(f"No data found: {url}")
@@ -70,21 +46,44 @@ def get_information(url):
     except Exception as e:
         print(f"Error processing {url}: {str(e)}")
 
+def get_profile_data():
+    starttime = time.time()
 
-# Process all URLs
-for url in links:
-    get_information(url)
+    # Read links from file
+    with open("links.txt", "r", encoding="utf-8") as file:
+        links = [line.strip() for line in file.readlines()]
 
-# Close driver after processing all URLs
-driver.quit()
+    # Configure Chrome options
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    chrome_options.add_experimental_option("useAutomationExtension", False)
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
 
-# Write all data to JSON file once
-if datas:
-    with open(data_file_name, "w", encoding="utf-8") as file:
-        json.dump(datas, file, indent=4, ensure_ascii=False)
-    print(f"Data saved to {data_file_name}")
-else:
-    print("No data collected")
+    data_file_name = "profile_data.json"
+    datas = []
 
-endtime = time.time()
-print(f"Execution time: {endtime - starttime:.2f} seconds")
+    # Initialize WebDriver once
+    driver = webdriver.Chrome(options=chrome_options)
+
+    # Process all URLs
+    for url in links:
+        get_information(url,datas, driver)
+
+    # Close driver after processing all URLs
+    driver.quit()
+
+    # Write all data to JSON file once
+    if datas:
+        with open(data_file_name, "w", encoding="utf-8") as file:
+            json.dump(datas, file, indent=4, ensure_ascii=False)
+        print(f"Data saved to {data_file_name}")
+    else:
+        print("No data collected")
+
+    endtime = time.time()
+    print(f"Execution time: {endtime - starttime:.2f} seconds")
