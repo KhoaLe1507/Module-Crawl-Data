@@ -5,7 +5,7 @@ import requests
 import regex
 
 
-def get_channel_id_from_custom_url(url):
+def get_channel_id_from_custom_url(url) -> str | None:
     decoded_url = urllib.parse.unquote(url).strip()
     if not decoded_url.startswith("http"):
         decoded_url = "https://" + decoded_url
@@ -31,7 +31,7 @@ def get_channel_id_from_custom_url(url):
         return None
 
 
-def extract_channel_id(url):
+def extract_channel_id(url: str) -> str | None:
     url = str(url).strip()
     if "/channel/" in url:
         return url.split("/channel/")[-1].split("/")[0]

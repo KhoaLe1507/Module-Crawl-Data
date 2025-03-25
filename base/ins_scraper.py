@@ -25,8 +25,8 @@ class InstagramScraper(WebScraper):
 
     @override
     def run(self, urls: List[str]) -> None:
-        usernames = [url.strip().rstrip("/").split("/")[-1] for url in urls]
-        for username in tqdm(usernames):
+        for url in tqdm(urls):
+            username = url.strip().rstrip("/").split("/")[-1]
             try:
                 # Thực hiện cào dữ liệu
                 Log.info(f"Đang xử lí username: {username}")

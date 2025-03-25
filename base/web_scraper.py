@@ -41,6 +41,10 @@ class ScrapeResult(object):
         else:
             self.other[key] = value
 
+    def assign_from_dict(self, d: Dict) -> None:
+        for key, value in d.items():
+            self[key] = value
+
     def to_dict(self) -> Dict:
         result = self.__dict__.copy()
         for key, value in self.__dict__.items():

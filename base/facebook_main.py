@@ -9,11 +9,9 @@ if __name__ == "__main__":
         with open("secret.json", "r", encoding="utf-8") as f:
             secret_info = json.load(f)
 
-        username = secret_info["username"]
-        password = secret_info["password"]
         config = FacebookConfig()
-        config.username = username
-        config.password = password
+        config.username = secret_info["username"]
+        config.password = secret_info["password"]
         config.check()
         scraper = FacebookScraper(config)
         urls = get_lines("base/facebook_urls.txt")

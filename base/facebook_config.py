@@ -1,6 +1,5 @@
 from web_scraper import Config, ScrapeResult
 from typing import override
-import datetime
 
 
 class FacebookConfig(Config):
@@ -57,7 +56,6 @@ class FacebookKOL(ScrapeResult):
         self.followers = None
         self.following = None
         self.likes = None
-        self.dateCollected = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.introDescription: str | None = None
         self.about = FacebookAbout()
         super().__init__()

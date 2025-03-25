@@ -217,7 +217,7 @@ class FacebookScraper(WebScraper):
                 intro_element = driver.find_element(
                     By.XPATH, Xpaths.intro_description_element_path
                 )
-                kol["introDescription"] = intro_element.text
+                kol.introDescription = intro_element.text
 
                 Log.info(1, f"Intro description: {kol.introDescription}")
 
@@ -320,9 +320,7 @@ class FacebookScraper(WebScraper):
 
             self.__scrape_general_url(driver, kol)  # Scrape general information
 
-            Log.info(
-                f"Scrape the page of {kol['pageName']} with url {url} successfully"
-            )
+            Log.info(f"Scrape the page of {kol.pageName} with url {url} successfully")
 
         except NoSuchElementException:  # Handle exception if we cannot access the page
             time.sleep(2)  # Sleep to wait the page load
@@ -340,9 +338,7 @@ class FacebookScraper(WebScraper):
                 exception_driver
             )  # Pay back the exceptional driver
 
-            Log.info(
-                f"Scrape the page of {kol['pageName']} with url {url} successfully"
-            )
+            Log.info(f"Scrape the page of {kol.pageName} with url {url} successfully")
 
         except Exception as e:
             Log.error(e)
