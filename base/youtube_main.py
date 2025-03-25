@@ -5,9 +5,8 @@ if __name__ == "__main__":
     scraper = None
 
     try:
-        api_keys = get_lines("base/youtube_api_keys.txt")
         config = YoutubeConfig()
-        config.api_keys = api_keys
+        config.api_keys = get_lines("base/youtube_api_keys.txt")
         scraper = YoutubeScraper(config)
         urls = get_lines("base/youtube_urls.txt")
         scraper.run(urls)

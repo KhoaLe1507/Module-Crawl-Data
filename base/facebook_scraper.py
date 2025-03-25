@@ -14,6 +14,7 @@ from selenium.common.exceptions import (
     NoSuchElementException,
     ElementClickInterceptedException,
     NoSuchAttributeException,
+    StaleElementReferenceException,
 )
 from bs4 import BeautifulSoup, Tag
 
@@ -27,10 +28,10 @@ from facebook_handle_login import (
     handle_login_from_main_page,
 )
 from fb_about_utils import (
-    fb_about_categories,
-    fb_about_contact_info,
-    fb_about_website_and_social_links,
-    fb_about_basic_info,
+    scrape_contact_and_basic_info,
+    scrape_privacy_and_legal_info,
+    scrape_page_transparency,
+    scrape_detail_info,
 )
 
 
@@ -232,8 +233,8 @@ class FacebookScraper(WebScraper):
     def __scrape_about_tab(self, url: str, kol: FacebookKOL) -> None:
         Log.info(f"Start scraping {kol.pageName}'s about tab.")
         driver = self.driver_queue.get()
+        driver.get(url)
         try:
-            driver.get(url)
             about_tab_element = None
             try:
                 about_tab_element = driver.find_element(
@@ -244,45 +245,87 @@ class FacebookScraper(WebScraper):
                 Log.error(e.msg)
                 return
             except ElementClickInterceptedException:
-                if about_tab_element:
-                    try:
-                        about_tab_element.click()
-                    except ElementClickInterceptedException as e:
-                        Log.error(e.msg)
-                        return
-
-            time.sleep(5)
-
-            contact_and_basic_info_elements = driver.find_elements(
-                By.XPATH, Xpaths.contact_and_basic_info_elements_path
-            )
-            for j, contact_and_basic_info_element in enumerate(
-                contact_and_basic_info_elements
-            ):
-                Log.info(j)
                 try:
-                    span_tag = contact_and_basic_info_element.find_element(
-                        By.XPATH, "div/div[1]/div/h2/span"
-                    )
-                except NoSuchElementException as e:
+                    if about_tab_element:
+                        about_tab_element.click()
+                except ElementClickInterceptedException as e:
                     Log.error(e.msg)
+                    return
+
+            time.sleep(2)
+
+            about_elements = driver.find_elements(
+                By.XPATH,
+                "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div/div/div/div[1]/div/div/div/div/div[1]/div",
+            )[1:]
+
+            Log.info(1, f"Number of about elements: {len(about_elements)}")
+
+            about_elements = driver.find_elements(
+                By.XPATH,
+                "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div/div/div/div[1]/div/div/div/div/div[1]/div",
+            )[1:]
+
+            Log.info(1, f"Number of about elements: {len(about_elements)}")
+
+            for j in range(len(about_elements)):
+                a = None
+                title = None
+                try:
+                    about_elements = driver.find_elements(
+                        By.XPATH,
+                        "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div/div/div/div[1]/div/div/div/div/div[1]/div",
+                    )[1:]  # Tìm lại phần tử
+
+                    about_e = about_elements[j]  # Lấy lại phần tử tránh lỗi
+
+                    a = about_e.find_element(By.TAG_NAME, "a")
+                    a.click()  # Chuyển tab
+
+                    time.sleep(2)  # Đợi nội dung tải lại
+
+                    about_elements = driver.find_elements(
+                        By.XPATH,
+                        "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div/div/div/div[1]/div/div/div/div/div[1]/div",
+                    )[1:]  # Lấy lại danh sách phần tử sau khi trang thay đổi
+                    about_e = about_elements[j]  # Lấy lại phần tử tránh lỗi
+
+                    title = about_e.text.lower()
+                    Log.info(2, f"Title: {title}")
+
+                except ElementClickInterceptedException as e:
+                    Log.error(f"Click bị chặn: {e.msg}")
+                    try:
+                        if a:
+                            a.click()
+                    except ElementClickInterceptedException as e:
+                        Log.error(f"Click vẫn bị chặn: {e.msg}")
+                        continue
+
+                except NoSuchElementException as e:
+                    Log.error(f"Không tìm thấy phần tử: {e.msg}")
                     continue
 
-                Log.info(span_tag.text.lower())
-                match span_tag.text.lower():
-                    case "categories":
-                        fb_about_categories(contact_and_basic_info_element, kol)
+                except StaleElementReferenceException as e:
+                    Log.error(f"Phần tử bị mất: {e.msg}, thử lại...")
+                    continue
 
-                    case "contact info":
-                        fb_about_contact_info(contact_and_basic_info_element, kol)
+                except Exception as e:
+                    Log.error("Lỗi khác:", e)
+                    continue
 
-                    case "websites and social links":
-                        fb_about_website_and_social_links(
-                            contact_and_basic_info_element, kol
-                        )
-
-                    case "basic info":
-                        fb_about_basic_info(contact_and_basic_info_element, kol)
+                if title == "contact and basic info":
+                    # Get contact and basic info
+                    scrape_contact_and_basic_info(driver, kol)
+                elif title == "privacy and legal info":
+                    # Get privacy and legal info
+                    scrape_privacy_and_legal_info(driver, kol)
+                elif title == "page transparency":
+                    # Get the page transparency info
+                    scrape_page_transparency(driver, kol)
+                elif isinstance(title, str) and "details" in title:
+                    # Gte the detail info
+                    scrape_detail_info(driver, kol)
 
             Log.info(f"Scrape the about tab of url {driver.current_url} successfully")
 

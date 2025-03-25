@@ -40,6 +40,9 @@ class FacebookAbout(ScrapeResult):
         self.tiktok = []
         self.instagram = []
         self.youtube = []
+        self.pageId: str | None = None
+        self.creationDate: str | None = None
+        self.detail: str | None = None
         super().__init__()
 
 

@@ -69,7 +69,6 @@ class YoutubeScraper(WebScraper):
         if not res or not res.get("items"):
             return None
         data = res["items"][0]
-        uploads_playlist_id = data["contentDetails"]["relatedPlaylists"]["uploads"]
         channel = YoutubeChannel()
         channel.channel_id = channel_id
         channel.channel_title = data["snippet"]["title"]
@@ -89,20 +88,32 @@ class YoutubeScraper(WebScraper):
         channel.topics = data.get("topicDetails", {}).get(
             "topicCategories", []
         )  # Config by YTB system
-        channel.localizations = list(data.get("localizations", {}).keys())
-        channel.defaultLanguage = data["brandingSettings"]["channel"].get(
-            "defaultLanguage", ""
-        )
-        channel.featuredChannels = data["brandingSettings"]["channel"].get(
-            "featuredChannelsUrls", []
-        )
         channel.moderateComments = data["brandingSettings"]["channel"].get(
             "moderateComments", False
         )
         channel.showRelatedChannels = data["brandingSettings"]["channel"].get(
             "showRelatedChannels", True
         )
-        channel.uploads_playlist_id = uploads_playlist_id
+        channel.communityGuidelinesGoodStanding = data.get("auditDetails", {}).get(
+            "communityGuidelinesGoodStanding", False
+        )  # Kênh có vi phạm chính sách cộng đồng không
+        channel.contentIdClaimsGoodStanding = data.get("auditDetails", {}).get(
+            "contentIdClaimsGoodStanding", False
+        )  # Trạng thái yêu cầu bản quyền nội dung
+        channel.copyrightStrikesGoodStanding = data.get("auditDetails", {}).get(
+            "copyrightStrikesGoodStanding", False
+        )  # Trạng thái bản quyền có vi phạm không
+        channel.moderateComments = data["brandingSettings"]["channel"].get(
+            "moderateComments", False
+        )
+        channel.showRelatedChannels = data["brandingSettings"]["channel"].get(
+            "showRelatedChannels", True
+        )
+        channel.moderationStatus = (
+            data.get("brandingSettings", {})
+            .get("channel", {})
+            .get("moderateComments", False)
+        )
         return channel
 
     def get_latest_video_ids(self, playlist_id, max_results=10) -> List:

@@ -53,12 +53,13 @@ class YoutubeChannel(ScrapeResult):
         self.subscriberCount: str | None = None
         self.videoCount: str | None = None
         self.bannerUrl: str | None = None
+        self.highThumbnail_url: str | None = None
         self.keywords: str | None = None
         self.topics: list[str] | None = None
-        self.localizations: list[str] | None = None
-        self.defaultLanguage: str | None = None
-        self.featuredChannels: list[str] | None = None
+        self.communityGuidelinesGoodStanding: bool | None = None
+        self.contentIdClaimsGoodStanding: bool | None = None
+        self.copyrightStrikesGoodStanding: bool | None = None
         self.moderateComments: bool | None = None
         self.showRelatedChannels: bool | None = None
-        self.uploads_playlist_id: str | None = None
+        self.moderationStatus: bool | None = None
         super().__init__()

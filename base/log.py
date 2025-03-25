@@ -1,6 +1,7 @@
 import logging
 import os
 from colorama import Fore, Style
+import traceback
 
 
 class Log:
@@ -34,6 +35,13 @@ class Log:
     def warn(cls, *args) -> None:
         print(Fore.YELLOW)
         logging.warning(args)
+        print(Style.RESET_ALL)
+
+    @classmethod
+    def traceback(cls, e: Exception) -> None:
+        print(Fore.RED)
+        print("Traceback:")
+        print(traceback.format_tb(e.__traceback__))
         print(Style.RESET_ALL)
 
     @classmethod
