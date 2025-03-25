@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     all_channels = []
 
-    for links in channel_links[0:1]:
+    for links in channel_links:
         print(f"Đang xử lý: {links}")
         channel_id = extract_channel_id(links)
         if not channel_id:
