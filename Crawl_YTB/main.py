@@ -3,7 +3,7 @@ from ytb_data_utils import extract_channel_id, get_channel_info
 from save_utils import append_to_json
 
 # Hàm chính của Cloud Function
-def crawl_data(event, context):
+def crawl_youtube_channel(event, context):
     """Hàm được gọi bởi Cloud Functions để crawl và upload dữ liệu lên GCS."""
     
     INPUT_FILE = "urls.txt"
