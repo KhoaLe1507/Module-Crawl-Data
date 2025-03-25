@@ -1,6 +1,9 @@
 import time
 from ytb_data_utils import extract_channel_id, get_channel_info
 from save_utils import append_to_json
+import os
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] ="E:\Service_KEY\creator-dev-453406-5346d229c216.json"
+
 
 if __name__ == "__main__":
     INPUT_FILE = "urls.txt"
@@ -9,7 +12,7 @@ if __name__ == "__main__":
 
     all_channels = []
 
-    for links in channel_links:
+    for links in channel_links[0:1]:
         print(f"Đang xử lý: {links}")
         channel_id = extract_channel_id(links)
         if not channel_id:
@@ -35,7 +38,7 @@ if __name__ == "__main__":
             
     """
 
-    append_to_json("YTB_channels120.json", all_channels)
+    append_to_json("YTB_channels120.json", all_channels , "influencer-profile" )
 
     """
     Tam thoi chua can thiet lay thong tin cac video va comment !!!
