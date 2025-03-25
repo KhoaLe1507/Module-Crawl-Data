@@ -1,0 +1,12 @@
+google-cloud-storage
+google-auth
+requests
+beautifulsoup4
+lxml
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+flask==2.0.2
+werkzeug>=2.0
+
+google-cloud-secret-manager==2.7.0

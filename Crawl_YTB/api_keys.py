@@ -1,8 +1,29 @@
 # === File: api_keys.py ===
 import requests
 
-with open("api_keys.txt", "r") as f:
-    API_KEYS = [line.strip() for line in f if line.strip()]
+from google.cloud import secretmanager
+import json
+
+# Khởi tạo client để truy xuất Secret Manager
+client = secretmanager.SecretManagerServiceClient()
+
+# Đặt tên Secret và phiên bản bạn muốn truy xuất
+project_id = 'creator-dev-453406'
+secret_name = 'my-api-keys'
+secret_version = 'latest'
+secret_path = f'projects/{project_id}/secrets/{secret_name}/versions/{secret_version}'
+
+# Lấy API keys từ Secret Manager
+def get_api_keys():
+    response = client.access_secret_version(name=secret_path)
+    api_keys_str = response.payload.data.decode("UTF-8")
+    
+    # Giả sử API keys được lưu dưới dạng mỗi key 1 dòng, tương tự file api_keys.txt
+    api_keys = api_keys_str.splitlines()
+    return api_keys
+
+# Đọc API key từ Secret Manager
+API_KEYS = get_api_keys()
 current_key_index = 0
 
 def get_api_key():
@@ -12,7 +33,8 @@ def get_api_key():
 def rotate_api_key():
     global current_key_index
     current_key_index = (current_key_index + 1) % len(API_KEYS)
-    print(f" Đang chuyển sang API Key thứ {current_key_index + 1}")
+    print(f"Đang chuyển sang API Key thứ {current_key_index + 1}")
+
 
 def safe_request(url):
     from api_keys import get_api_key, rotate_api_key, API_KEYS
