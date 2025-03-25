@@ -1,7 +1,3 @@
 /secret.json
-/base/youtube_result.json
-/base/facebook_result.json
-/base/tiktok_result.json
-/base/ins_result.json
 __pycache__/
 /base/youtube_api_keys.txt

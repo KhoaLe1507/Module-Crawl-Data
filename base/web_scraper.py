@@ -45,9 +45,12 @@ class ScrapeResult(object):
         for key, value in d.items():
             self[key] = value
 
-    def to_dict(self) -> Dict:
+    def to_dict(self, **rename_dict) -> Dict:
         result = self.__dict__.copy()
         for key, value in self.__dict__.items():
+            if key in rename_dict:
+                result[rename_dict[key]] = result.pop(key)
+                key = rename_dict[key]
             if isinstance(value, ScrapeResult):
                 result[key] = value.to_dict()
 

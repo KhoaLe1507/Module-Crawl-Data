@@ -79,6 +79,9 @@ class YoutubeScraper(WebScraper):
         channel.viewCount = data["statistics"].get("viewCount")
         channel.subscriberCount = data["statistics"].get("subscriberCount", "hidden")
         channel.videoCount = data["statistics"].get("videoCount")
+        channel.highThumbnail_Avatar = (
+            data["snippet"].get("thumbnails", {}).get("high", {}).get("url", "")
+        )
         channel.bannerUrl = (
             data["brandingSettings"].get("image", {}).get("bannerExternalUrl", "")
         )
