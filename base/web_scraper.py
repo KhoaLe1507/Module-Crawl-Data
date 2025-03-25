@@ -23,7 +23,9 @@ class Config:
 
 
 class ScrapeResult(object):
-    def __init__(self) -> None:
+    def __init__(self, export_other: bool = True) -> None:
+        self.export_other = export_other
+        self.rename_dict: Dict[str, str] = {}
         self.other = {}
 
     def __getitem__(self, key: str) -> Any:
@@ -45,14 +47,22 @@ class ScrapeResult(object):
         for key, value in d.items():
             self[key] = value
 
-    def to_dict(self, **rename_dict) -> Dict:
-        result = self.__dict__.copy()
-        for key, value in self.__dict__.items():
-            if key in rename_dict:
-                result[rename_dict[key]] = result.pop(key)
-                key = rename_dict[key]
+    def to_dict(self) -> Dict:
+        d = self.__dict__.copy()
+        d.pop("export_other")
+        d.pop("rename_dict")
+
+        if not self.export_other:
+            d.pop("other")
+
+        result = {}
+        for src_key, value in d.items():
+            dest_key = src_key
+            if src_key in self.rename_dict:
+                dest_key = self.rename_dict[src_key]
             if isinstance(value, ScrapeResult):
-                result[key] = value.to_dict()
+                value = value.to_dict()
+            result[dest_key] = value
 
         return result
 

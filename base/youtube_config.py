@@ -1,4 +1,4 @@
-from typing import List, Dict, override
+from typing import List
 from web_scraper import Config, ScrapeResult
 
 
@@ -63,8 +63,7 @@ class YoutubeChannel(ScrapeResult):
         self.showRelatedChannels: bool | None = None
         self.moderationStatus: bool | None = None
         super().__init__()
+        self.rename_dict["highThumbnail_Avatar"] = "highThumbnail/Avatar"
 
-    @override
-    def to_dict(self, **rename_dict) -> Dict:
-        rename_dict["highThumbnail_Avatar"] = "highThumbnail/Avatar"
-        return super().to_dict(**rename_dict)
+
+# EOF
