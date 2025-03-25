@@ -48,22 +48,22 @@ def get_information(url):
             user_info = json_data.get('__DEFAULT_SCOPE__', {}).get('webapp.user-detail', {}).get('userInfo', {})
 
             if user_info:
-                videos = []
-                for video_div in soup.select("div[data-e2e='user-post-item']"):
-                    video = {
-                        "video_id": video_div.get("data-video-id"),
-                        "caption": video_div.select_one(
-                            "div[data-e2e='video-title']").text.strip() if video_div.select_one(
-                            "div[data-e2e='video-title']") else None,
-                        "likes": video_div.select_one(
-                            "strong[data-e2e='video-views']").text.strip() if video_div.select_one(
-                            "strong[data-e2e='video-views']") else None,
-                        "url": f"https://www.tiktok.com/@{user_info['user']['uniqueId']}/video/{video_div.get('data-video-id')}"
-                    }
-                    videos.append(video)
-                user_info["videos"] = videos
+                # videos = []
+                # for video_div in soup.select("div[data-e2e='user-post-item']"):
+                #     video = {
+                #         "video_id": video_div.get("data-video-id"),
+                #         "caption": video_div.select_one(
+                #             "div[data-e2e='video-title']").text.strip() if video_div.select_one(
+                #             "div[data-e2e='video-title']") else None,
+                #         "likes": video_div.select_one(
+                #             "strong[data-e2e='video-views']").text.strip() if video_div.select_one(
+                #             "strong[data-e2e='video-views']") else None,
+                #         "url": f"https://www.tiktok.com/@{user_info['user']['uniqueId']}/video/{video_div.get('data-video-id')}"
+                #     }
+                #     videos.append(video)
+                # user_info["videos"] = videos
+                # print(user_info['user']['nickname'])
                 datas.append(user_info)
-                print(f"Success: {url}")
                 return
         print(f"No data found: {url}")
 
