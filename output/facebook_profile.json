@@ -1,0 +1,70 @@
+[
+    {
+        "platform": "facebook",
+        "id": 0,
+        "pageUrl": "https://www.facebook.com/babykopohome.page",
+        "avatarUrl": "https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.6435-1/87992339_106385697637278_6524059604706394112_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=8ZhADBT4zs4Q7kNvgGB96hE&_nc_oc=Adm2LLgEjgk32a6-cAoA68S9le347VmXLrTNRwocKPrYU76EApmV_9cND6aZ7pS6TVE&_nc_zt=24&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=EyAwZmZg4qSZq82UqkQLbA&oh=00_AYH9tAdbAuFVGfcV7g_WNoTi0J3EilBYjKWWO3JSTn2PFA&oe=680B6660",
+        "profileAvatarUrl": "https://scontent.fsgn2-7.fna.fbcdn.net/v/t1.6435-9/88148813_106495434292971_2022304163278356480_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=PruvjtzNU4wQ7kNvgE_y9xn&_nc_oc=AdnClZWWx78z-qIk3FdNq7nDRK6unqHRO9vcTGqWhdoDUeIYlIUCJSyRWeJmhePmQo4&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=EyAwZmZg4qSZq82UqkQLbA&oh=00_AYFp97SetaygCUzU0Lxav9LSsTpdz8RbZSqDR4wxUXG0pQ&oe=680B785F",
+        "pageName": "Babykopo Home ",
+        "talkingAbout": "26,491",
+        "likesCount": "952,809",
+        "followers": "1.4M",
+        "following": "18",
+        "likes": null,
+        "introDescription": "Page chính thức của BabyKopo Home, được quản lý, vận hành và bảo vệ bởi YeaH1 Digital.",
+        "about": {
+            "categories": "Public figure",
+            "email": "babykopohome.contact@gmail.com",
+            "mobile": "",
+            "address": "",
+            "website": [
+                "https://www.instagram.com/babykopohome/",
+                "https://www.tiktok.com/@babykopohome",
+                "https://www.youtube.com/channel/UCltOcTYhyg48uegR4R30KRQ"
+            ],
+            "tiktok": [],
+            "instagram": [],
+            "youtube": [],
+            "pageId": "106385514303963",
+            "creationDate": "March 1, 2020",
+            "detail": null,
+            "other": {
+                "privacyAndLegalInfo": {
+                    "impressum": "Nội dung từ \" Babykopo Home\" thuộc quyền quản lý của hệ thống YeaH1 Digital và Babykopo Home.\n\nContent Videos from “Babykopo Home” belong to YeaH1 Dig… See more"
+                }
+            }
+        },
+        "other": {}
+    },
+    {
+        "platform": "facebook",
+        "id": 1,
+        "pageUrl": "https://www.facebook.com/Nguyenhaicomedy",
+        "avatarUrl": "https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-1/293792761_452258663572916_2740301673360922324_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=KPl00_yGgnsQ7kNvgFJYnb-&_nc_oc=AdlRZfeSPIXZWUYgn2G3912c0pEbAoazWidmBew_W2NQpjpVpKdMJhY_pYOYiG8pMGI&_nc_zt=24&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=rZfm3QW2k8i2EbSDbGyBTw&oh=00_AYEAPEn2usuoB2ghJlI4dBJucd2ctwlLVZlW9Kof0dmNKw&oe=67E9C6D8",
+        "profileAvatarUrl": "https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/293030728_452258666906249_8972473059437985351_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=pNkKsi2PgMYQ7kNvgE6OK0m&_nc_oc=AdmiIKR-FBOUydh7mWP2CXmMAZm3I1WMH_wrlPzeg1ywM8uJ-ypqFtC_eA6yKkxKiJA&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=rZfm3QW2k8i2EbSDbGyBTw&oh=00_AYGTr-gewci24yFYIVMFGkNqYfTUPuC-dQ7EUUhGYlpeig&oe=67E9EF18",
+        "pageName": "Nguyễn Hải nè ",
+        "talkingAbout": "264,088",
+        "likesCount": "538,509",
+        "followers": "1.3M",
+        "following": "2",
+        "likes": null,
+        "introDescription": "Fanpage chính thức của Nguyễn Hải\nPage được quản lý, vận hành và bảo vệ bản quyền bởi YeaH1 Digital.",
+        "about": {
+            "categories": "Digital creator",
+            "email": "",
+            "mobile": "",
+            "address": "",
+            "website": [],
+            "tiktok": [],
+            "instagram": [],
+            "youtube": [],
+            "pageId": "107529867852337",
+            "creationDate": "November 23, 2020",
+            "detail": null,
+            "other": {
+                "basicInfo1": "Not yet rated (4 Reviews)"
+            }
+        },
+        "other": {}
+    }
+]

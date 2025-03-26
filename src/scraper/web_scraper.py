@@ -14,9 +14,7 @@ class WebScraper(object):
     def run(self) -> None:
         urls = get_lines(f"{Config.input_folder}/{self.config.platform}_urls.txt")
         self.run__(urls)
-        output_filename = (
-            f"{Config.output_folder}/{self.config.platform}_{self.config.data_type}.json",
-        )
+        output_filename = f"{Config.output_folder}/{self.config.platform}_{self.config.data_type}.json"
         export_json(self.result, output_filename)
         if Config.product_mode:
             upload_to_gcs(

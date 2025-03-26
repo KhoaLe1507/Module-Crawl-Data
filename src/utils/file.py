@@ -23,12 +23,12 @@ def get_output_filename(platform: str, data_type: str):
     return filename
 
 
-def export_json(data: List, output_filename) -> None:
+def export_json(data: List, output_filename: str) -> None:
     if len(data) == 0:
         return
 
     d = data
-    if isinstance(data, ScrapeResult):
+    if isinstance(data[0], ScrapeResult):
         d = [obj.to_dict() for obj in data]
 
     dirpath = os.path.dirname(os.path.abspath(output_filename))
