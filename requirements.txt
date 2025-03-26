@@ -1,0 +1,6 @@
+regex
+google-cloud-storage
+google-cloud-secret-manager
+bs4
+tqdm
+selenium
