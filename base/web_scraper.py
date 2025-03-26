@@ -1,7 +1,8 @@
 import os
 import json
 from typing import List, Dict, Any
-from log import Log
+import datetime
+import time
 
 
 def get_lines(filepath: str) -> List[str]:
@@ -11,9 +12,19 @@ def get_lines(filepath: str) -> List[str]:
     return urls
 
 
+def get_output_filename(platform: str, data_type: str):
+    year = datetime.datetime.now().year
+    month = datetime.datetime.now().month
+    day = datetime.datetime.now().day
+    timestamp = int(time.time())
+
+    filename = f"{platform}/year={year}/month={month}/day={day}/{platform}_{data_type}_{timestamp}.json"
+    return filename
+
+
 class Config:
     def __init__(self) -> None:
-        self.logging_file: str | None = None
+        pass
 
     def check(self) -> None:
         """
@@ -69,7 +80,6 @@ class ScrapeResult(object):
 
 class WebScraper(object):
     def __init__(self, config: Config) -> None:
-        Log.init(config.logging_file)
         self.config = config
         self.result: List = []
 
@@ -77,7 +87,7 @@ class WebScraper(object):
         _ = urls
 
     def close(self) -> None:
-        Log.close()
+        pass
 
     def export(self, filepath: str) -> None:
         if len(self.result) == 0:

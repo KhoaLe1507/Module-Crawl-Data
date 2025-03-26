@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup, Tag
 import json
-import time
 from typing import List, override
 
 from web_scraper import ScrapeResult, WebScraper, Config
@@ -119,14 +118,11 @@ class TiktokScraper(WebScraper):
 
     @override
     def run(self, urls: List[str]) -> None:
-        starttime = time.time()
         for url in urls:
             try:
                 self.get_information(url)
             except Exception as e:
                 Log.error(f"Error processing {url}: {str(e)}")
-        endtime = time.time()
-        Log.info(f"Total time taken: {endtime - starttime}")
 
     @override
     def close(self) -> None:

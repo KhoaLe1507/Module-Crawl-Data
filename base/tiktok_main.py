@@ -1,23 +1,27 @@
 from tiktok_scraper import TiktokScraper, TiktokConfig
-from web_scraper import get_lines
-import json
+from web_scraper import get_lines, get_output_filename
+from log import Log
 
-if __name__ == "__main__":
+
+def scrape_tiktok(inp_folder: str, out_folder: str):
+    Log.start("Tiktok scraping started.")
     scraper = None
     try:
-        # Tạo file secret.json tại thư mục chính của repo
-        with open("secret.json", "r", encoding="utf-8") as f:
-            secret_info = json.load(f)
-
         config = TiktokConfig()
         config.check()
         scraper = TiktokScraper(config)
-        urls = get_lines("base/tiktok_urls.txt")
+        urls = get_lines(f"{inp_folder}/tiktok_urls.txt")
         scraper.run(urls)
-        scraper.export("base/tiktok_result.json")
-        print("Scraper finished successfully.")
+        output_filename = (
+            f"{out_folder}/output/{get_output_filename('tiktok', 'profile')}"
+        )
+        scraper.export(output_filename)
+        Log.finish(f"Tiktok scraping finished, exported to {output_filename}.")
+    except Exception as e:
+        Log.exception(e)
     finally:
         if scraper:
             scraper.close()
+
 
 # EOF

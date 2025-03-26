@@ -125,7 +125,7 @@ def scrape_contact_and_basic_info(driver: webdriver.Chrome, kol: FacebookKOL) ->
                     except StaleElementReferenceException as e:
                         Log.error(e.msg)
                     except Exception as e:
-                        Log.traceback(e)
+                        Log.exception(e)
 
                     # Get social links and check if social_list is existed?
                     if len_web_social == 3 or (
@@ -190,7 +190,7 @@ def scrape_contact_and_basic_info(driver: webdriver.Chrome, kol: FacebookKOL) ->
     except NoSuchElementException as e:
         Log.error(e.msg)
     except Exception as e:
-        Log.traceback(e)
+        Log.exception(e)
 
 
 def scrape_privacy_and_legal_info(
@@ -267,7 +267,7 @@ def scrape_privacy_and_legal_info(
     except NoSuchElementException as e:
         Log.error(e.msg)
     except Exception as e:
-        Log.traceback(e)
+        Log.exception(e)
 
 
 def scrape_page_transparency(
@@ -303,7 +303,7 @@ def scrape_page_transparency(
     except NoSuchElementException as e:
         Log.error(e.msg)
     except Exception as e:
-        Log.traceback(e)
+        Log.exception(e)
 
 
 def scrape_detail_info(driver: webdriver.Chrome, kol: FacebookKOL):
@@ -330,7 +330,7 @@ def scrape_detail_info(driver: webdriver.Chrome, kol: FacebookKOL):
     except NoSuchElementException as e:
         Log.error(e.msg)
     except Exception as e:
-        Log.traceback(e)
+        Log.exception(e)
 
 
 # EOF

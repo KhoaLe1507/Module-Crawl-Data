@@ -1,12 +1,15 @@
 from facebook_scraper import FacebookScraper, FacebookConfig
-from web_scraper import get_lines
+from web_scraper import get_lines, get_output_filename
+from log import Log
 import json
 
-if __name__ == "__main__":
+
+def scrape_facebook(inp_folder: str, out_folder: str):
+    Log.start("Facebook scraping started.")
     scraper = None
     try:
         # Tạo file secret.json tại thư mục chính của repo
-        with open("secret.json", "r", encoding="utf-8") as f:
+        with open(f"{inp_folder}/secrets/secret.json", "r", encoding="utf-8") as f:
             secret_info = json.load(f)
 
         config = FacebookConfig()
@@ -14,12 +17,16 @@ if __name__ == "__main__":
         config.password = secret_info["password"]
         config.check()
         scraper = FacebookScraper(config)
-        urls = get_lines("base/facebook_urls.txt")
+        urls = get_lines(f"{inp_folder}/facebook_urls.txt")
         scraper.run(urls)
-        scraper.export("base/facebook_result.json")
-        print("Scraper finished successfully.")
+        output_filename = f"{out_folder}/{get_output_filename('facebook', 'profile')}"
+        scraper.export(output_filename)
+        Log.finish(f"Facebook scraping finished, exported to {output_filename}.")
+    except Exception as e:
+        Log.exception(e)
     finally:
         if scraper:
             scraper.close()
+
 
 # EOF
