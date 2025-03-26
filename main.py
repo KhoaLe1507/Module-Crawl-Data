@@ -32,5 +32,22 @@ def main():
     Log.info(f"Total time taken: {endtime - starttime}")
 
 
+def gcs_main(request):
+    auth_header = request.headers.get("Authorization")
+    if not auth_header:
+        return (
+            "Authorization header missing",
+            403,
+        )  # Nếu không có Authorization header, trả về lỗi 403
+
+    # Lấy Bearer Token từ header
+    token = auth_header.split(" ")[1] if " " in auth_header else ""
+
+    if not token:
+        return "Invalid token", 403  # Nếu không có token, trả về lỗi
+
+    main()
+
+
 if __name__ == "__main__":
     main()

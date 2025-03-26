@@ -25,3 +25,6 @@ def upload_to_gcs(bucket_name, file_path, platform, data_type):
 
     Log.finish(f"Đã upload {file_path} lên gs://{bucket_name}/{blob_name} thành công.")
     return f"gs://{bucket_name}/{blob_name}"
+
+
+# EOF
