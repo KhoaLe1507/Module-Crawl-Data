@@ -3,6 +3,6 @@
   "output_folder": "output",
   "secret_folder": "secret",
   "bucket_name": "influencer-profile",
-  "product_mode": false,
+  "product_mode": true,
   "project_id": "creator-dev-453406"
 }
