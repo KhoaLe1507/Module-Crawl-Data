@@ -18,7 +18,7 @@ class WebScraper(object):
             f"{Config.output_folder}/{self.config.platform}_{self.config.data_type}.json",
         )
         export_json(self.result, output_filename)
-        if Config.export_to_gcs:
+        if Config.product_mode:
             upload_to_gcs(
                 Config.bucket_name,
                 output_filename,
