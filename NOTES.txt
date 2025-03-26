@@ -1,0 +1,94 @@
+2025-03-22:
+10:00
+Đây là khu vực dành cho codebase.
+Đang trong quá trình xây dựng.
+
+17:00
+Tạo một file "secret.txt" tại thư mục chính của repo
+để lưu username và password cho tài khoản fb
+
+
+2025-03-25:
+23:30
+###
+Codebase hiện đang chứa các ví dụ cụ thể
+cho từng nền tảng. Bản thân mỗi nền tảng
+yêu cầu các kĩ thuật riêng để thu thập dữ liệu,
+tuy nhiên chúng có những điểm chung từ việc nhập các
+url từ file, xây dựng các biến config rồi kiểm tra
+tính hợp lệ của nó, tiến hành gọi chạy mô hình, xuất
+dữ liệu ra file json. Những điểm chung này
+đã được thống nhất trong từng ví dụ của codebase.
+Nếu sau này có thêm nền tảng mới, thì ngay từ ban đầu
+đã có thể nhanh chóng xây dựng được các phần cơ bản
+như trên.
+
+Đến hiện tại, các chương trình python trong mỗi thư mục
+chuyên biệt về một nền tảng đều xuất ra file json
+theo một format nào đó. Nếu không cần bước xử lí gì thêm
+thì có thể upload trực tiếp các file này lên cloud.
+Tuy vậy, codebase đang phát triển tính năng theo dõi các
+trường, dành cho nhu cầu chọn lọc các trường có thể sau này.
+
+###
+Đến nay, phần codebase đã đạt được yêu cầu:
+
+[OK] Support crawl data từ nhiều nguồn social
+
+Sắp tới, codebase sẽ được tiếp tục sửa đổi để có thể:
+
+[?] Làm việc trên repo dc cấp bởi @Lê Khắc Thọ 
+[?] Deploy lên hạ tầng GCP (liên hệ @Lê Khắc Thọ để cấp tk)
+[?] Hỗ trợ 2 môi trường DEV và PRD
+
+
+###
+Codebase đang được xây dựng theo hướng hỗ trợ
+kiểm soát các trường thông tin thu thập được.
+
+Xem base/web_scraper.py, class ScrapeResult
+
+Ví dụ, cho class KOL (kế thừa từ class ScrapeResult)
+kèm theo 4 trường được
+khởi tạo gồm url, username, likes, followers.
+
+Để gán giá trị cho một trường, ví dụ như likes,
+ta có thể viết kol.likes = value hoặc kol["likes"] = value
+
+Cú pháp kol['s'] có thể gán trực tiếp dữ liệu
+vào trường kol.s, với điều kiện s là thuộc tính đã được
+khai báo của kol.
+
+Đối với kol[s] với s là trường không được khai báo:
+class ScrapeResult còn có một thuộc tính là other kiểu Dict,
+lưu lại các dữ liệu thuộc về các trường không được khai báo.
+Trong trường hợp KOL không khai báo trường likes thì
+dict other sẽ nhận 'likes' làm key và dữ liệu làm value, 
+tức kol['likes'] = value tương đương với kol.other['likes'] = value
+
+Ta có thể chọn xuất other hoặc không xuất other ra json.
+Mục đích của other là theo dõi các trường không được
+khai báo trong __init__ của class.
+
+
+###
+Việc sử dụng tên biến, thuộc tính thay cho string nhằm hướng đến
+việc debug và thay đổi code tiện lợi hơn.
+
+Đối với các đối tượng được xuất ra file json, tên biến là gì
+thì xuất ra file json vẫn giữ tên đó. Tuy nhiên class ScrapeResult
+cho phép thay đổi tên biến khi xuất ra json thông qua thuộc tính
+rename_dict. Ví dụ, rename_dict = {'a_b': 'a/$b'} sẽ xuất ra json
+có thuộc tính "a_b" được thay bằng 'a/$b'. Tên biến trong python
+không được chứa các kí tự đặc biệt, nhưng nếu khi xuất ra json việc chứa các kí 
+tự đặc biệt trong tên trường là cần thiết thì đây là một tính năng
+hữu ích.
+
+###
+Codebase đang hướng đến việc để các biến toàn cục như driver, config được lưu lại
+trong hàm dựng __init__ của class.
+
+Các phép gán, phép truyền thao số đều là phép gán tham chiếu (trừ
+khi kiểu dữ liệu là kiểu không sửa được như int, str, float, tuple, bool).
+Biết được điều đó, ta có thể viết các phương thức của một class trong các file khác nhau
+để tránh một file trở nên quá dài.
