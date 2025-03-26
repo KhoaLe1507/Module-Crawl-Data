@@ -1,3 +1,2 @@
-/input/secrets/secret.json
 __pycache__/
-/youtube_api_keys.txt
+/secrets/*

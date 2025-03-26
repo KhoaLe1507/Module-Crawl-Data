@@ -46,7 +46,7 @@ class YoutubeScraper(WebScraper):
         return None
 
     @override
-    def run(self, urls: list[str]) -> None:
+    def run__(self, urls: list[str]) -> None:
         for url in urls:
             Log.info(f"Đang xử lý: {url}")
             channel_id = extract_channel_id(url)

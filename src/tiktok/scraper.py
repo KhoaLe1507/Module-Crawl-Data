@@ -7,7 +7,8 @@ from bs4 import BeautifulSoup, Tag
 import json
 from typing import List, override
 
-from src.scraper.web_scraper import ScrapeResult, WebScraper, Config
+from src.scraper.web_scraper import WebScraper, ScrapeConfig
+from src.scraper.result import ScrapeResult
 from src.utils.log import Log
 
 
@@ -24,9 +25,11 @@ def conv_chrome_options(
     return result
 
 
-class TiktokConfig(Config):
+class TiktokConfig(ScrapeConfig):
     def __init__(self) -> None:
         super().__init__()
+        self.platform = "tiktok"
+        self.data_type = "channel"
         # start: config for chrome options
         self.chrome_options = [
             "--headless",
@@ -117,7 +120,7 @@ class TiktokScraper(WebScraper):
         self.driver = webdriver.Chrome(options=chrome_options)
 
     @override
-    def run(self, urls: List[str]) -> None:
+    def run__(self, urls: List[str]) -> None:
         for url in urls:
             try:
                 self.get_information(url)

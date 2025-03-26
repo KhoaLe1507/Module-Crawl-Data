@@ -1,10 +1,13 @@
 from typing import List
-from src.scraper.web_scraper import Config, ScrapeResult
+from src.scraper.web_scraper import ScrapeConfig
+from src.scraper.result import ScrapeResult
 
 
-class YoutubeConfig(Config):
+class YoutubeConfig(ScrapeConfig):
     def __init__(self) -> None:
         super().__init__()
+        self.platform = "youtube"
+        self.data_type = "channel"
         self.api_keys: List[str] = []
 
 

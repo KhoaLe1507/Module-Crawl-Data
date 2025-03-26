@@ -1,10 +1,14 @@
-from src.scraper.web_scraper import Config, ScrapeResult
+from src.scraper.web_scraper import ScrapeConfig
+from src.scraper.result import ScrapeResult
 from typing import override
 
 
-class FacebookConfig(Config):
+class FacebookConfig(ScrapeConfig):
     def __init__(self) -> None:
         super().__init__()
+        self.platform = "facebook"
+        self.data_type = "profile"
+
         self.chrome_options = ["start-maximized"]
         self.experimental_options = [
             ("prefs", {"profile.default_content_setting_values.notifications": 2})

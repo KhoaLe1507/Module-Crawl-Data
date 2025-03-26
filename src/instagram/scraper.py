@@ -24,7 +24,7 @@ class InstagramScraper(WebScraper):
         )
 
     @override
-    def run(self, urls: List[str]) -> None:
+    def run__(self, urls: List[str]) -> None:
         for url in tqdm(urls):
             username = url.strip().rstrip("/").split("/")[-1]
             try:

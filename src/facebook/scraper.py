@@ -102,7 +102,7 @@ class FacebookScraper(WebScraper):
             Log.error(e.msg)
 
     @override
-    def run(self, urls: List[str]) -> None:
+    def run__(self, urls: List[str]) -> None:
         self.__start_drivers()
         # Multi-threading
         with ThreadPoolExecutor(max_workers=self.config.n_workers) as executor:
