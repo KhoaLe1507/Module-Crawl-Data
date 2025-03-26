@@ -1,14 +1,14 @@
 from typing import List, override
 import requests
 
-from web_scraper import WebScraper
+from src.scraper.web_scraper import WebScraper
 from src.youtube.config import (
     YoutubeConfig,
     YoutubeChannel,
     YoutubeVideo,
     YoutubeVideoComment,
 )
-from log import Log
+from src.utils.log import Log
 from src.youtube.utils import extract_channel_id
 
 

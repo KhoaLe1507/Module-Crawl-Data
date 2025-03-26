@@ -7,8 +7,8 @@ from bs4 import BeautifulSoup, Tag
 import json
 from typing import List, override
 
-from web_scraper import ScrapeResult, WebScraper, Config
-from log import Log
+from src.scraper.web_scraper import ScrapeResult, WebScraper, Config
+from src.utils.log import Log
 
 
 def conv_chrome_options(

@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup, Tag
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from log import Log
+from src.utils.log import Log
 import jmespath
 
 

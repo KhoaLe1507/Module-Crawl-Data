@@ -1,6 +1,6 @@
 from src.tiktok.scraper import TiktokScraper, TiktokConfig
-from web_scraper import get_lines, get_output_filename
-from log import Log
+from src.scraper.web_scraper import get_lines, get_output_filename
+from src.utils.log import Log
 
 
 def scrape_tiktok(inp_folder: str, out_folder: str):

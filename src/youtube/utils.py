@@ -1,4 +1,4 @@
-from log import Log
+from src.utils.log import Log
 
 import urllib.parse
 import requests

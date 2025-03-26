@@ -1,6 +1,6 @@
 from src.facebook.scraper import FacebookScraper, FacebookConfig
-from web_scraper import get_lines, get_output_filename
-from log import Log
+from src.scraper.web_scraper import get_lines, get_output_filename
+from src.utils.log import Log
 import json
 
 

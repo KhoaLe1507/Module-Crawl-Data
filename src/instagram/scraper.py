@@ -1,4 +1,4 @@
-from web_scraper import WebScraper
+from src.scraper.web_scraper import WebScraper
 import time
 import random
 from tqdm import tqdm
@@ -7,7 +7,7 @@ import httpx
 from typing import override, List
 from src.instagram.config import InstagramConfig
 from src.instagram.utils import scrape_user_fallback, parse_user
-from log import Log
+from src.utils.log import Log
 
 
 class InstagramScraper(WebScraper):

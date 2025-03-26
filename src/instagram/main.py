@@ -1,7 +1,7 @@
 from src.instagram.scraper import InstagramScraper
 from src.instagram.config import InstagramConfig
-from web_scraper import get_lines, get_output_filename
-from log import Log
+from src.scraper.web_scraper import get_lines, get_output_filename
+from src.utils.log import Log
 
 
 def scrape_instagram(inp_folder: str, out_folder):

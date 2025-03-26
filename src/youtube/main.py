@@ -1,6 +1,6 @@
 from src.youtube.scraper import YoutubeScraper, YoutubeConfig
-from web_scraper import get_lines, get_output_filename
-from log import Log
+from src.scraper.web_scraper import get_lines, get_output_filename
+from src.utils.log import Log
 
 
 def scrape_youtube(inp_folder: str, out_folder: str):

@@ -18,9 +18,9 @@ from selenium.common.exceptions import (
 )
 from bs4 import BeautifulSoup, Tag
 
-from web_scraper import WebScraper
+from src.scraper.web_scraper import WebScraper
 from src.facebook.config import FacebookConfig, FacebookKOL, Xpaths
-from log import Log
+from src.utils.log import Log
 from src.facebook.handle_login import (
     handle_login_from_redirecting,
     handle_login_from_kol_page,

@@ -1,5 +1,5 @@
 from typing import List
-from web_scraper import Config, ScrapeResult
+from src.scraper.web_scraper import Config, ScrapeResult
 
 
 class YoutubeConfig(Config):

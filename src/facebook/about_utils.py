@@ -5,7 +5,7 @@ from selenium.common.exceptions import (
     StaleElementReferenceException,
 )
 
-from log import Log
+from src.utils.log import Log
 
 from src.facebook.config import FacebookKOL, Xpaths
 from selenium import webdriver

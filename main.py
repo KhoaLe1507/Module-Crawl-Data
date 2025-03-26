@@ -2,7 +2,7 @@ from src.facebook.main import scrape_facebook
 from src.instagram.main import scrape_instagram
 from src.tiktok.main import scrape_tiktok
 from src.youtube.main import scrape_youtube
-from log import Log
+from src.utils.log import Log
 
 import time
 

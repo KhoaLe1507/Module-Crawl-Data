@@ -7,7 +7,7 @@ from selenium.common.exceptions import (
     ElementClickInterceptedException,
     NoSuchWindowException,
 )
-from log import Log
+from src.utils.log import Log
 from src.facebook.config import FacebookConfig, Xpaths
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
