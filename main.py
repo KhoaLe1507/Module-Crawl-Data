@@ -7,6 +7,7 @@ from src.youtube.main import scrape_youtube
 from src.utils.log import Log
 from src.utils.config import Config
 from src.gcs.secret import GcsSecret
+from flask import Flask
 
 import time
 import os
@@ -64,12 +65,18 @@ def gcs_main(request):
     body()
 
 
+app = Flask(__name__)
+
+
+@app.route("/")
 def main():
     head()
     body()
+    return ""
 
 
 if __name__ == "__main__":
-    main()
+    PORT = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=PORT)
 
 # EOF
