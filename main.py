@@ -1,23 +1,23 @@
-from manager import ScrapingManager
-from data import read_urls, save_data
+from src.facebook.main import scrape_facebook
+from src.instagram.main import scrape_instagram
+from src.tiktok.main import scrape_tiktok
+from src.youtube.main import scrape_youtube
+from log import Log
 
-if __name__ == '__main__':
-    URLs = read_urls('urls.txt')
+import time
 
-    scraping_manager = ScrapingManager(
-        ['start-maximized'],
-        [("prefs", {"profile.default_content_setting_values.notifications": 2})],
-        num_workers=1,
-        logging_file=None
-    )
 
-    scraping_manager.start_drivers()
-    scraping_manager.start_exceptional_drivers()
+def main():
+    inp_folder = "input"
+    out_folder = "output"
+    starttime = time.time()
+    scrape_facebook(inp_folder, out_folder)
+    scrape_instagram(inp_folder, out_folder)
+    scrape_tiktok(inp_folder, out_folder)
+    scrape_youtube(inp_folder, out_folder)
+    endtime = time.time()
+    Log.info(f"Total time taken: {endtime - starttime}")
 
-    data = scraping_manager.scrape(
-        URLs,
-        is_scraping_general_info=True,
-        is_scraping_about_tab=True
-    )
 
-    save_data(data, 'data.json')
+if __name__ == "__main__":
+    main()
