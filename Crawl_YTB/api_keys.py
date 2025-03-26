@@ -16,18 +16,22 @@ def get_api_keys():
     try:
         response = client.access_secret_version(name=secret_path)
         api_keys_str = response.payload.data.decode("UTF-8")
+        print(f"[DEBUG] Raw API Key string: [{api_keys_str}]")  # In luôn trong dấu [] để thấy rõ nếu rỗng
         api_keys = api_keys_str.splitlines()
+        print(f"[DEBUG] Số lượng API key nạp được: {len(api_keys)}")
         return api_keys
     except Exception as e:
-        print(f"Không thể truy xuất Secret: {e}")
+        print(f"[ERROR] Không thể truy xuất Secret: {e}")
         return []
-
 # Đọc API keys từ Secret Manager
 API_KEYS = get_api_keys()
+
 current_key_index = 0
 
 def get_api_key():
     global current_key_index
+    if not API_KEYS:
+        raise Exception("Không có API Key nào được tải từ Secret Manager!")
     return API_KEYS[current_key_index]
 
 def rotate_api_key():
