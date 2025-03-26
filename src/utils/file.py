@@ -23,8 +23,7 @@ def get_output_filename(platform: str, data_type: str):
     return filename
 
 
-def export_json(data: List, output_folder, platform, data_type) -> None:
-    filepath = f"{output_folder}/{platform}_{data_type}.json"
+def export_json(data: List, output_filename) -> None:
     if len(data) == 0:
         return
 
@@ -32,9 +31,9 @@ def export_json(data: List, output_folder, platform, data_type) -> None:
     if isinstance(data, ScrapeResult):
         d = [obj.to_dict() for obj in data]
 
-    dirpath = os.path.dirname(os.path.abspath(filepath))
+    dirpath = os.path.dirname(os.path.abspath(output_filename))
     os.makedirs(dirpath, exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
+    with open(output_filename, "w", encoding="utf-8") as f:
         json.dump(d, f, indent=4, ensure_ascii=False)
 
 

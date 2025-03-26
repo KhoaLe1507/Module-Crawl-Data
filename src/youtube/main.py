@@ -1,7 +1,7 @@
 from src.youtube.scraper import YoutubeScraper, YoutubeConfig
 from src.scraper.web_scraper import get_lines
 from src.utils.log import Log
-from src.scraper.config import ScrapeConfig
+from src.utils.config import Config
 
 
 def scrape_youtube():
@@ -9,10 +9,8 @@ def scrape_youtube():
     scraper = None
     try:
         config = YoutubeConfig()
-        if not ScrapeConfig.export_to_gcs:
-            config.api_keys = get_lines(
-                f"{ScrapeConfig.secret_folder}/youtube_api_keys.txt"
-            )
+        if not Config.export_to_gcs:
+            config.api_keys = get_lines(f"{Config.secret_folder}/youtube_api_keys.txt")
         scraper = YoutubeScraper(config)
         scraper.run()
         Log.finish("Youtube scraping finished.")

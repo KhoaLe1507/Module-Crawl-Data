@@ -1,5 +1,5 @@
 from src.facebook.scraper import FacebookScraper, FacebookConfig
-from src.scraper.config import ScrapeConfig
+from src.utils.config import Config
 from src.utils.log import Log
 import json
 
@@ -10,9 +10,9 @@ def scrape_facebook():
     try:
         # Tạo file secret.json tại thư mục chính của repo
         config = FacebookConfig()
-        if not ScrapeConfig.export_to_gcs:
+        if not Config.export_to_gcs:
             with open(
-                f"{ScrapeConfig.secret_folder}/secret.json", "r", encoding="utf-8"
+                f"{Config.secret_folder}/secret.json", "r", encoding="utf-8"
             ) as f:
                 secret_info = json.load(f)
 
