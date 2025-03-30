@@ -16,7 +16,7 @@ def get_api_keys():
     try:
         response = client.access_secret_version(name=secret_path)
         api_keys_str = response.payload.data.decode("UTF-8")
-        print(f"[DEBUG] Raw API Key string: [{api_keys_str}]")  # In luôn trong dấu [] để thấy rõ nếu rỗng
+        #print(f"[DEBUG] Raw API Key string: [{api_keys_str}]")  # In luôn trong dấu [] để thấy rõ nếu rỗng
         api_keys = api_keys_str.splitlines()
         print(f"[DEBUG] Số lượng API key nạp được: {len(api_keys)}")
         return api_keys
