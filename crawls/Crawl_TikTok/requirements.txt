@@ -1,0 +1,10 @@
+google-cloud-storage
+pytz
+google-auth
+requests
+selenium
+beautifulsoup4
+lxml
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
