@@ -1,49 +1,39 @@
+from profile_scraper import scrape_profiles
+from post_scraper import scrape_posts
 import os
-import time
-import random
 import json
-from scrapers import scrape_user_fallback, parse_user, save_to_file
+from flask import make_response, jsonify
 
-def main():
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    output_file = os.path.join(current_dir, "instagram_data.json")
-    input_file = os.path.join(current_dir, "urls.txt")
-
-    # Ghi đè file output cũ khi chương trình bắt đầu (khởi tạo thành danh sách rỗng)
+def crawl_instagram(request):
+    """
+    Hàm xử lý HTTP trigger cho Cloud Functions.
+    Cào dữ liệu từ Instagram và trả về kết quả dưới dạng JSON.
+    """
+    urls_file = "urls.txt"            # File chứa danh sách URL
+    output_profile_file = "/tmp/instagram_data.json"
+    output_post_file = "/tmp/instagram_post.json"  # File lưu dữ liệu cào về
+    results_limit = 1
+    
+    # Kiểm tra xem file urls.txt có tồn tại không
+    if not os.path.exists(urls_file):
+        return make_response(jsonify({"error": "File urls.txt không tồn tại"}), 500)
+    
+    # Cào dữ liệu profile và post
     try:
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump([], f, ensure_ascii=False, indent=4)
-        print("Đã khởi tạo file output thành công.")
+        scrape_profiles(urls_file, output_profile_file)
     except Exception as e:
-        print(f"Lỗi khi khởi tạo file output: {e}")
-        return
+        return make_response(jsonify({"error": "Lỗi khi cào dữ liệu profile", "details": str(e)}), 500)
 
-    # Đọc danh sách URL từ file input
     try:
-        with open(input_file, "r", encoding="utf-8") as f:
-            urls = f.readlines()
+        scrape_posts(urls_file, output_post_file, results_limit)
     except Exception as e:
-        print(f"Lỗi khi đọc file input: {e}")
-        return
+        return make_response(jsonify({"error": "Lỗi khi cào dữ liệu post", "details": str(e)}), 500)
 
-    # Trích xuất username từ URL
-    usernames = [url.strip().rstrip("/").split("/")[-1] for url in urls]
+    # Trả về thông báo thành công mà không cần đọc lại dữ liệu từ file
+    response_data = {
+        "message": "Dữ liệu đã được cào thành công từ Instagram",
+        "profile_data_file": output_profile_file,
+        "post_data_file": output_post_file
+    }
 
-    for username in usernames:
-        try:
-            # Thực hiện cào dữ liệu
-            user_data = scrape_user_fallback(username)
-            parsed_data = parse_user(user_data)
-            save_to_file(output_file, parsed_data)
-            print(f"Đã lưu dữ liệu cho: {username}")
-            delay = random.uniform(20, 30)
-            print(f"Delay: {delay:.2f} giây")
-            time.sleep(delay)
-        except Exception as e:
-            # Khi gặp lỗi (ví dụ bị chặn) thì in lỗi và dừng chương trình
-            print(f"Lỗi khi cào dữ liệu của {username}: {e}")
-            print("Dừng chương trình do lỗi.")
-            break
-
-if __name__ == '__main__':
-    main()
+    return jsonify(response_data)
