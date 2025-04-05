@@ -31,7 +31,7 @@ def upload_json_to_gcs(bucket_name, data):
     print(f"Đã upload dữ liệu JSON lên gs://{bucket_name}/{blob_name} thành công.")
     return f"gs://{bucket_name}/{blob_name}"
 
-def scrape_posts_and_upload(urls_file_path, results_limit=30):
+def scrape_posts(urls_file_path, results_limit=1):
     client = ApifyClient(APIFY_API_TOKEN)
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
