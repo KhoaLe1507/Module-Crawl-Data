@@ -2,7 +2,7 @@ from profile_scraper import scrape_profiles
 from post_scraper import scrape_posts
 import os
 import json
-import traceback  # <- Thêm dòng này
+import traceback
 from flask import make_response, jsonify
 
 def crawl_instagram(request):

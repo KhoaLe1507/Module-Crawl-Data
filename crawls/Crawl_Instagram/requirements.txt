@@ -9,3 +9,4 @@ httpx
 jmespath
 pytz
 apify-client
+flask
