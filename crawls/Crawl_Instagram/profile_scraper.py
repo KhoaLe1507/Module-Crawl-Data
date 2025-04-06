@@ -8,10 +8,6 @@ import pytz
 APIFY_API_TOKEN = os.environ.get("APIFY_API_TOKEN")
 
 def upload_json_to_gcs(bucket_name, data):
-    """
-    Upload dữ liệu JSON trực tiếp lên GCS theo định dạng:
-    instagram/year=yyyy/month=mm/day=dd/instagram_user_infor_{timestamp}.json
-    """
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
 
@@ -32,7 +28,7 @@ def upload_json_to_gcs(bucket_name, data):
     return f"gs://{bucket_name}/{blob_name}"
 
 def scrape_profiles(urls_file_path):
-    client = ApifyClient("APIFY_API_TOKEN")
+    client = ApifyClient(APIFY_API_TOKEN)
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
     if not os.path.isabs(urls_file_path):
