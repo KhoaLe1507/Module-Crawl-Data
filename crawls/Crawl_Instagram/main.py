@@ -3,19 +3,15 @@ from post_scraper import scrape_posts
 import os
 import json
 import traceback
-from flask import make_response, jsonify
+from flask import jsonify, make_response
 
 def crawl_instagram(request):
-    """
-    Hàm xử lý HTTP trigger cho Cloud Functions.
-    Cào dữ liệu từ Instagram và trả về kết quả dưới dạng JSON.
-    """
-    urls_file = "urls.txt"            # File chứa danh sách URL
+    current_dir = os.path.dirname(__file__)
+    urls_file = os.path.join(current_dir, "urls.txt")
     output_profile_file = "/tmp/instagram_data.json"
-    output_post_file = "/tmp/instagram_post.json"  # File lưu dữ liệu cào về
+    output_post_file = "/tmp/instagram_post.json"
     results_limit = 1
 
-    # Kiểm tra xem file urls.txt có tồn tại không
     if not os.path.exists(urls_file):
         print("[❌] Không tìm thấy file urls.txt")
         return make_response(jsonify({"error": "File urls.txt không tồn tại"}), 500)

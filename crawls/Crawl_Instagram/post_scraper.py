@@ -32,7 +32,7 @@ def upload_json_to_gcs(bucket_name, data):
     return f"gs://{bucket_name}/{blob_name}"
 
 def scrape_posts(urls_file_path, results_limit=1):
-    client = ApifyClient(APIFY_API_TOKEN)
+    client = ApifyClient("APIFY_API_TOKEN")
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
     if not os.path.isabs(urls_file_path):
