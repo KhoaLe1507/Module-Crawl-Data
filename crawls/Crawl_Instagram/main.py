@@ -13,15 +13,15 @@ def crawl_instagram(request):
     results_limit = 1
 
     if not os.path.exists(urls_file):
-        print("[❌] Không tìm thấy file urls.txt")
+        print("Không tìm thấy file urls.txt")
         return make_response(jsonify({"error": "File urls.txt không tồn tại"}), 500)
 
     try:
-        print("[🚀] Bắt đầu cào dữ liệu profile...")
+        print("Bắt đầu cào dữ liệu profile...")
         scrape_profiles(urls_file)
-        print("[✅] Hoàn tất cào dữ liệu profile.")
+        print("Hoàn tất cào dữ liệu profile.")
     except Exception as e:
-        print("[❌] Lỗi khi cào dữ liệu profile:", e)
+        print("Lỗi khi cào dữ liệu profile:", e)
         traceback.print_exc()
         return make_response(jsonify({
             "error": "Lỗi khi cào dữ liệu profile",
@@ -30,11 +30,11 @@ def crawl_instagram(request):
         }), 500)
 
     try:
-        print("[🚀] Bắt đầu cào dữ liệu post...")
+        print("Bắt đầu cào dữ liệu post...")
         scrape_posts(urls_file, results_limit)
-        print("[✅] Hoàn tất cào dữ liệu post.")
+        print("Hoàn tất cào dữ liệu post.")
     except Exception as e:
-        print("[❌] Lỗi khi cào dữ liệu post:", e)
+        print("Lỗi khi cào dữ liệu post:", e)
         traceback.print_exc()
         return make_response(jsonify({
             "error": "Lỗi khi cào dữ liệu post",
