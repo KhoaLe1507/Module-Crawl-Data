@@ -56,5 +56,5 @@ def scrape_posts(urls_file_path, results_limit=1):
     items = list(client.dataset(dataset_id).iterate_items())
     items = sorted(items, key=lambda item: usernames.index(item["username"]) if "username" in item and item["username"] in usernames else len(usernames))
 
-    gcs_path = upload_json_to_gcs("influencer-profile", items)
+    gcs_path = upload_json_to_gcs("influencer-post", items)
     print(f"Đường dẫn GCS: {gcs_path}")
