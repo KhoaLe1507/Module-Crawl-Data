@@ -1,10 +1,13 @@
 import os
 import json
-from apify_client import ApifyClient
-from google.cloud import storage
+import traceback
 from datetime import datetime
 import pytz
+from flask import jsonify, make_response
+from apify_client import ApifyClient
+from google.cloud import storage
 
+# Đọc token từ biến môi trường
 APIFY_API_TOKEN = os.environ.get("APIFY_API_TOKEN")
 
 def upload_json_to_gcs(bucket_name, data):
@@ -61,3 +64,30 @@ def scrape_profiles(urls_file_path):
 
     gcs_path = upload_json_to_gcs("influencer-profile", items)
     print(f"Đường dẫn GCS: {gcs_path}")
+
+def crawl_instagram_profiles(request):
+    current_dir = os.path.dirname(__file__)
+    urls_file = os.path.join(current_dir, "urls.txt")
+
+    if not os.path.exists(urls_file):
+        print("Không tìm thấy file urls.txt")
+        return make_response(jsonify({"error": "File urls.txt không tồn tại"}), 500)
+
+    try:
+        print("Bắt đầu cào dữ liệu profile...")
+        scrape_profiles(urls_file)
+        print("Hoàn tất cào dữ liệu profile.")
+    except Exception as e:
+        print("Lỗi khi cào dữ liệu profile:", e)
+        traceback.print_exc()
+        return make_response(jsonify({
+            "error": "Lỗi khi cào dữ liệu profile",
+            "details": str(e),
+            "trace": traceback.format_exc()
+        }), 500)
+
+    response_data = {
+        "message": "Dữ liệu đã được cào thành công từ Instagram",
+    }
+
+    return jsonify(response_data)
