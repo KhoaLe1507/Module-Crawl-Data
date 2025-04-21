@@ -1,15 +1,15 @@
 import os
 import json
 import traceback
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from apify_client import ApifyClient
+from flask import jsonify, make_response, has_request_context
+from core.apify_keys import API_KEYS
+from core.key_manager import APIKeyManager
+from google.cloud import storage
 from datetime import datetime
 import pytz
-from flask import jsonify, make_response
-
-from apify_client import ApifyClient
-from google.cloud import storage
-
-# Lấy token từ biến môi trường
-APIFY_API_TOKEN = os.environ.get("APIFY_API_TOKEN")
 
 def upload_json_to_gcs(bucket_name, data):
     storage_client = storage.Client()
@@ -22,71 +22,105 @@ def upload_json_to_gcs(bucket_name, data):
     day = now.strftime("%d")
     timestamp = int(now.timestamp())
 
-    blob_name = f"instagram/year={year}/month={month}/day={day}/instagram_post_data_{timestamp}.json"
+    blob_name = f"instagram/year={year}/month={month}/day={day}/instagram_user_infor_{timestamp}.json"
     blob = bucket.blob(blob_name)
 
     json_str = json.dumps(data, ensure_ascii=False, indent=4)
     blob.upload_from_string(json_str, content_type="application/json")
 
     print(f"Đã upload dữ liệu JSON lên gs://{bucket_name}/{blob_name} thành công.")
-    return f"gs://{bucket_name}/{blob_name}"
 
-def scrape_posts(urls_file_path, results_limit=1):
-    client = ApifyClient(APIFY_API_TOKEN)
+def batched(lst, batch_size):
+    for i in range(0, len(lst), batch_size):
+        yield lst[i:i + batch_size]
 
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    if not os.path.isabs(urls_file_path):
-        urls_file_path = os.path.join(current_dir, urls_file_path)
 
-    with open(urls_file_path, "r", encoding="utf-8") as f:
-        urls = [line.strip() for line in f if line.strip()]
-
-    usernames = [url.rstrip("/").split("/")[-1] for url in urls]
-
+def process_batch(batch, results_limit, key_manager):
+    """Cào dữ liệu cho 1 batch, thử nhiều key nếu gặp lỗi"""
     run_input = {
-        "username": usernames,
+        "username": batch,
         "resultsLimit": results_limit,
     }
 
-    run = client.actor("apify/instagram-post-scraper").call(run_input=run_input)
-    dataset_id = run.get("defaultDatasetId")
+    for _ in range(len(API_KEYS)):
+        api_key = key_manager.get()
+        print(f"[Batch {batch}] Đang dùng API key: {api_key}")
+        try:
+            client = ApifyClient(api_key)
+            run = client.actor("apify/instagram-post-scraper").call(run_input=run_input)
+            dataset_id = run.get("defaultDatasetId")
+            if not dataset_id:
+                raise Exception("Không tìm thấy dataset ID")
 
-    if not dataset_id:
-        print("Không tìm thấy dataset ID trong kết quả chạy Actor.")
-        return
+            items = list(client.dataset(dataset_id).iterate_items())
+            print(f"[Batch {batch}]Thành công với key {api_key}. Số lượng item: {len(items)}")
+            return items
+        except Exception as e:
+            print(f"[Batch {batch}] Lỗi với key {api_key}: {e}")
+            traceback.print_exc()
+            key_manager.switch()
 
-    print("Check your data here: https://console.apify.com/storage/datasets/" + dataset_id)
+    print(f"[Batch {batch}] Tất cả key đều lỗi, bỏ qua batch này.")
+    return []
 
-    items = list(client.dataset(dataset_id).iterate_items())
-    items = sorted(items, key=lambda item: usernames.index(item["username"]) if "username" in item and item["username"] in usernames else len(usernames))
 
-    gcs_path = upload_json_to_gcs("influencer-post", items)
-    print(f"Đường dẫn GCS: {gcs_path}")
+def scrape_posts_from_usernames(usernames, results_limit, batch_size=2):
+    batches = list(batched(usernames, batch_size=batch_size))
+    key_managers = [APIKeyManager([API_KEYS[i % len(API_KEYS)]]) for i in range(len(batches))]
 
-def crawl_instagram_posts(request):
-    current_dir = os.path.dirname(__file__)
-    urls_file = os.path.join(current_dir, "urls.txt")
-    results_limit = 1
+    results_dict = {}
 
-    if not os.path.exists(urls_file):
-        print("Không tìm thấy file urls.txt")
-        return make_response(jsonify({"error": "File urls.txt không tồn tại"}), 500)
+    with ThreadPoolExecutor(max_workers=min(len(API_KEYS), len(batches))) as executor:
+        future_to_index = {
+            executor.submit(process_batch, batch, results_limit, key_managers[i]): i
+            for i, batch in enumerate(batches)
+        }
 
+        for future in as_completed(future_to_index):
+            i = future_to_index[future]
+            try:
+                items = future.result()
+                results_dict[i] = items
+            except Exception as exc:
+                print(f"[Batch {i}] Gặp lỗi không mong muốn: {exc}")
+                traceback.print_exc()
+
+    all_items = []
+    for i in sorted(results_dict.keys()):
+        all_items.extend(results_dict[i])
+
+    return all_items
+
+
+
+def crawl_instagram_posts(request=None):
     try:
-        print("Bắt đầu cào dữ liệu post...")
-        scrape_posts(urls_file, results_limit)
-        print("Hoàn tất cào dữ liệu post.")
+        request_json = request.get_json(silent=True)
+
+        if not request_json or 'urls' not in request_json:
+            return 'Missing "urls" in request body', 400
+
+        urls = request_json['urls']
+        if not isinstance(urls, list) or not all(isinstance(link, str) for link in urls):
+            return '"urls" must be a list of strings', 400
+        try:
+            results_limit = int(request_json.get('NumberPost', 10))
+        except ValueError:
+            return '"NumberPost" must be an integer', 400
+
+        print(f"Bắt đầu cào dữ liệu cho {len(urls)} user, mỗi user {results_limit} post")
+
+        usernames = [url.rstrip("/").split("/")[-1] for url in urls]
+        data = scrape_posts_from_usernames(usernames, results_limit, batch_size=2)
+
+        upload_json_to_gcs("influencer-post", data)
+
+        success_msg = f"Đã cào xong. Mỗi user: {results_limit} post."
+        print(success_msg)
+        return success_msg, 200
+
     except Exception as e:
-        print("Lỗi khi cào dữ liệu post:", e)
+        error_msg = f"Lỗi khi xử lý request: {str(e)}"
+        print(error_msg)
         traceback.print_exc()
-        return make_response(jsonify({
-            "error": "Lỗi khi cào dữ liệu post",
-            "details": str(e),
-            "trace": traceback.format_exc()
-        }), 500)
-
-    response_data = {
-        "message": "Dữ liệu đã được cào thành công từ Instagram",
-    }
-
-    return jsonify(response_data)
+        return error_msg, 500
